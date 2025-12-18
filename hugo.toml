@@ -1,3 +1,144 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# General
+# --------------------------------
+
+baseURL = "https://jpgl.es/"
+title = "Juan Pedro Gálvez López"
+theme = "neso"
+
+timeZone = "Europe/Madrid"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+
+# i18n & Language-Specific Theme Settings
+# --------------------------------
+
+[languages.en]
+disabled          = false
+languageCode      = "en-us"
+languageDirection = "ltr"
+languageName      = "English"
+hasCJKLanguage    = false
+title             = "Juan Pedro Gálvez López"
+weight            = 1
+
+[languages.es]
+disabled          = false
+languageCode      = "es"
+languageDirection = "ltr"
+languageName      = "Español"
+hasCJKLanguage    = false
+title             = "Juan Pedro Gálvez López"
+weight            = 2
+
+# Menus
+# --------------------------------
+
+[[menus.main]]
+identifier = "search"
+name       = "Search"
+pageRef    = "/search"
+weight     = 50
+
+[[menus.main]]
+identifier = "github"
+name       = "GitHub"
+url        = "https://github.com/kiinami"
+weight     = 60
+
+[[languages.es.menus.main]]
+identifier = "search"
+name       = "Buscar"
+pageRef    = "/search"
+weight     = 50
+
+[[languages.es.menus.main]]
+identifier = "github"
+name       = "GitHub"
+url        = "https://github.com/kiinami"
+weight     = 60
+
+# Theme settings (general)
+# --------------------------------
+
+[params.neso]
+ext_link_indicator = true
+ext_link_no_opener_referrer = true
+ext_link_new_window = true
+hide_copyright = true
+display_short_lang_name = true
+home.display_mode = "profile"
+home.profile.avatar_image = "/images/avatar.jpg"
+home.profile.avatar_image_alt_text = "Avatar image"
+
+[[params.neso.social.links]]
+    name = "Github"
+    url  = "https://github.com/kiinami"
+[[params.neso.social.links]]
+    name = "LinkedIn"
+    url  = "https://www.linkedin.com/in/juan-pedro-galvez"
+
+# Theme settings (EN)
+# --------------------------------
+
+[[params.neso.home.profile.link_btns]]
+    label = "Top Repos"
+    url   = "https://github.com/kiinami"
+
+# Theme settings (ES)
+# --------------------------------
+
+[languages.es.params.neso]
+time_format = "2 de January de 2006"
+
+[[languages.es.params.neso.home.profile.link_btns]]
+    label = "Top Repos"
+    url   = "https://github.com/kiinami"
+
+# Build
+# --------------------------------
+
+[minify]
+  minifyOutput = true
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+  [[build.cachebusters]]
+    source = '(postcss|tailwind)\.config\.js'
+    target = 'css'
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
+
+[outputs]
+  home = ["html", "json"]
+
+# Markdown
+# --------------------------------
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      wrapStandAloneImageWithinParagraph = false
+
+      [markup.goldmark.parser.attribute]
+        block = true
+
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.highlight]
+    noClasses = false
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
