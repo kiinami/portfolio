@@ -110,6 +110,7 @@ time_format = "2 de January de 2006"
   [[build.cachebusters]]
     source = '(postcss|tailwind)\.config\.js'
     target = 'css'
+  
 [module]
   [[module.mounts]]
     source = 'assets'
@@ -121,6 +122,10 @@ time_format = "2 de January de 2006"
 
 [outputs]
   home = ["html", "json"]
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
 
 # Markdown
 # --------------------------------
