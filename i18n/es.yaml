@@ -1,0 +1,80 @@
+alert_caution:
+    other: "Precaución"
+
+alert_important:
+    other: "Importante"
+
+alert_note:
+    other: "Nota"
+
+alert_tip:
+    other: "Consejo"
+
+alert_warning:
+    other: "Advertencia"
+
+author:
+    one: "Autor: "
+    other: "Autores: "
+
+breadcrumbs:
+    other: "Ruta de navegación"
+
+code_copied:
+    other: "📋 ¡Copiado!"
+
+code_copy:
+    other: "Copiar"
+
+draft:
+    other: "Borrador"
+
+entry_count:
+    other: "Recuento de entradas: "
+
+entry_link_aria:
+    other: "Leer “{{ .Title }}”"
+
+feature_entries:
+    other: "Proyectos destacados"
+
+heading_link_label:
+    other: "Enlace a esta sección"
+
+home:
+    other: "Inicio"
+
+next_entry:
+    other: "Más reciente"
+
+next_page:
+    other: "Siguiente"
+
+prev_entry:
+    other: "Más antiguo"
+
+prev_page:
+    other: "Anterior"
+
+read_time:
+    one: "Lectura: 1 min"
+    other: "Lectura: {{ .Count }} min"
+
+share_btn_aria:
+    other: "Compartir “{{ .Title }}” en {{ .Provider }}"
+
+share_btn_title:
+    other: "Compartir en {{ .Provider }}"
+
+toc:
+    other: "Tabla de Contenidos"
+
+translations:
+    other: "Traducciones:&nbsp;"
+
+view_archives:
+    other: "Ver Archivos"
+
+words:
+    one: "palabra"
+    other: "{{ .Count }} palabras"
