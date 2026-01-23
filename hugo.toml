@@ -41,16 +41,10 @@ pageRef    = "/projects"
 weight     = 30
 
 [[menus.main]]
-identifier = "tags"
-name       = "Tags"
-pageRef    = "/tags"
-weight     = 40
-
-[[menus.main]]
-identifier = "search"
-name       = "Search"
-pageRef    = "/search"
-weight     = 50
+identifier = "stack"
+name       = "Tech Stack"
+pageRef    = "/stack"
+weight     = 55
 
 [[menus.main]]
 identifier = "github"
@@ -65,22 +59,269 @@ pageRef    = "/projects"
 weight     = 30
 
 [[languages.es.menus.main]]
-identifier = "tags"
-name       = "Etiquetas"
-pageRef    = "/tags"
-weight     = 40
-
-[[languages.es.menus.main]]
-identifier = "search"
-name       = "Buscar"
-pageRef    = "/search"
-weight     = 50
+identifier = "stack"
+name       = "Tecnologías"
+pageRef    = "/stack"
+weight     = 55
 
 [[languages.es.menus.main]]
 identifier = "github"
 name       = "GitHub"
 url        = "https://github.com/kiinami"
 weight     = 60
+
+# Tech Stack Categories
+# --------------------------------
+[[params.tech_categories]]
+  id = "languages"
+  name = "cat_api_languages"
+[[params.tech_categories]]
+  id = "frameworks"
+  name = "cat_frameworks"
+[[params.tech_categories]]
+  id = "db"
+  name = "cat_db"
+[[params.tech_categories]]
+  id = "tools"
+  name = "cat_tools"
+[[params.tech_categories]]
+  id = "design"
+  name = "cat_design"
+
+
+# Use unique IDs for 'id' to reference in content pages
+# --------------------------------
+[[params.technologies]]
+  id = "python"
+  name = "tech_python"
+  icon = "devicon-python-plain"
+  url = "https://www.python.org/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "cpp"
+  name = "tech_cpp"
+  icon = "devicon-cplusplus-plain"
+  url = "https://isocpp.org/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "telegram"
+  name = "tech_telegram"
+  icon = "fa-brands fa-telegram"
+  url = "https://core.telegram.org/bots/api"
+  category = "tools"
+
+[[params.technologies]]
+  id = "postgresql"
+  name = "tech_postgresql"
+  icon = "devicon-postgresql-plain"
+  url = "https://www.postgresql.org/"
+  category = "db"
+
+[[params.technologies]]
+  id = "sqlite"
+  name = "tech_sqlite"
+  icon = "devicon-sqlite-plain"
+  url = "https://www.sqlite.org/"
+  category = "db"
+
+[[params.technologies]]
+  id = "opengl"
+  name = "tech_opengl"
+  icon = "devicon-opengl-plain"
+  url = "https://www.opengl.org/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "imgui"
+  name = "tech_imgui"
+  icon = "devicon-cplusplus-plain"
+  url = "https://github.com/ocornut/imgui"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "docker"
+  name = "tech_docker"
+  icon = "devicon-docker-plain"
+  url = "https://www.docker.com/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "csharp"
+  name = "tech_csharp"
+  icon = "devicon-csharp-plain"
+  url = "https://docs.microsoft.com/en-us/dotnet/csharp/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "java"
+  name = "tech_java"
+  icon = "devicon-java-plain"
+  url = "https://www.java.com/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "dart"
+  name = "tech_dart"
+  icon = "devicon-dart-plain"
+  url = "https://dart.dev/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "html"
+  name = "tech_html"
+  icon = "devicon-html5-plain"
+  url = "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  category = "languages"
+
+[[params.technologies]]
+  id = "css"
+  name = "tech_css"
+  icon = "devicon-css3-plain"
+  url = "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  category = "languages"
+
+[[params.technologies]]
+  id = "bash"
+  name = "tech_bash"
+  icon = "devicon-bash-plain"
+  url = "https://www.gnu.org/software/bash/"
+  category = "languages"
+
+[[params.technologies]]
+  id = "glsl"
+  name = "tech_glsl"
+  icon = "devicon-opengl-plain"
+  url = "https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)"
+  category = "languages"
+
+[[params.technologies]]
+  id = "unity"
+  name = "tech_unity"
+  icon = "devicon-unity-original"
+  url = "https://unity.com/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "django"
+  name = "tech_django"
+  icon = "devicon-django-plain"
+  url = "https://www.djangoproject.com/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "flask"
+  name = "tech_flask"
+  icon = "devicon-flask-original"
+  url = "https://flask.palletsprojects.com/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "fastapi"
+  name = "tech_fastapi"
+  icon = "devicon-fastapi-plain"
+  url = "https://fastapi.tiangolo.com/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "reactnative"
+  name = "tech_reactnative"
+  icon = "devicon-react-original"
+  url = "https://reactnative.dev/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "flutter"
+  name = "tech_flutter"
+  icon = "devicon-flutter-plain"
+  url = "https://flutter.dev/"
+  category = "frameworks"
+
+[[params.technologies]]
+  id = "mysql"
+  name = "tech_mysql"
+  icon = "devicon-mysql-plain"
+  url = "https://www.mysql.com/"
+  category = "db"
+
+[[params.technologies]]
+  id = "mongodb"
+  name = "tech_mongodb"
+  icon = "devicon-mongodb-plain"
+  url = "https://www.mongodb.com/"
+  category = "db"
+
+[[params.technologies]]
+  id = "git"
+  name = "tech_git"
+  icon = "devicon-git-plain"
+  url = "https://git-scm.com/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "docker_compose"
+  name = "tech_docker_compose"
+  icon = "devicon-docker-plain"
+  url = "https://docs.docker.com/compose/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "github_actions"
+  name = "tech_github_actions"
+  icon = "devicon-github-original"
+  url = "https://github.com/features/actions"
+  category = "tools"
+
+[[params.technologies]]
+  id = "linux"
+  name = "tech_linux"
+  icon = "devicon-linux-plain"
+  url = "https://www.linux.org/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "linear"
+  name = "tech_linear"
+  icon = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/linear-dark.svg"
+  url = "https://linear.app/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "trello"
+  name = "tech_trello"
+  icon = "devicon-trello-plain"
+  url = "https://trello.com/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "cmake"
+  name = "tech_cmake"
+  icon = "devicon-cmake-plain"
+  url = "https://cmake.org/"
+  category = "tools"
+
+[[params.technologies]]
+  id = "blender"
+  name = "tech_blender"
+  icon = "devicon-blender-original"
+  url = "https://www.blender.org/"
+  category = "design"
+
+[[params.technologies]]
+  id = "illustrator"
+  name = "tech_illustrator"
+  icon = "devicon-illustrator-plain"
+  url = "https://www.adobe.com/products/illustrator.html"
+  category = "design"
+
+[[params.technologies]]
+  id = "inkscape"
+  name = "tech_inkscape"
+  icon = "devicon-inkscape-plain"
+  url = "https://inkscape.org/"
+  category = "design"
+
 
 # Theme settings (general)
 # --------------------------------
@@ -118,6 +359,14 @@ time_format = "2 de January de 2006"
 
 # Build
 # --------------------------------
+
+# Project States
+# --------------------------------
+[params.project_states]
+  "in progress" = { bg = "#3b82f6", text = "#ffffff" }
+  "finished"    = { bg = "#22c55e", text = "#ffffff" }
+  "dropped"     = { bg = "#ef4444", text = "#ffffff" }
+  "paused"      = { bg = "#6b7280", text = "#ffffff" }
 
 [minify]
   minifyOutput = true

@@ -1,11 +1,14 @@
 ---
 title           : "Kamihi"
+date: 2025-07-18T10:17:57+01:00
 slug            : "kamihi"  # slug (URL segment) for this post
+state: "in progress"
 
 description     : "Framework de código abierto para el desarrollo y manejo de bots de Telegram en Python"
 summary         : "Framework de código abierto para el desarrollo y manejo de bots de Telegram en Python"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
-tags            : ["Python", "Telegram", "Framework", "Webapp", "PostgreSQL", "SQLite"]
+tags            : ["Framework", "Webapp"]
+techs           : ["python", "telegram", "postgresql", "sqlite", "docker"]
 
 params:
   neso:
@@ -34,6 +37,15 @@ Como único desarrollador y mantenedor de este proyecto, mi trabajo engloba todo
 Mi foco principal es el diseño de la interfaz de programación del _framework_, que intento que sea muy intuitiva, fácil de utilizar, e incluso "mágica", sin por ello cerrar la posibilidad de utilizar las funciones más avanzadas que ofrece la API de Telegram.
 
 Los usuarios que conozco no son programadores expertos, y el _framework_ está pensado y cuidadosamente diseñado para que puedan centrarse en su lógica de negocio, construyendo el bot que necesiten lo más rápido posible.
+
+También he puesto bastante esfuerzo en el _framework_ de pruebas. Con ayuda de contenedores, las pruebas funcionales pueden ejecutar y verificar un proyecto entero hecho con el _framework_ en exactamente el mismo entorno utilizado en producción. Se puede verificar el envío de mensajes automáticamente y directamente en los servidores de Telegram, así como el resto de componentes y funcionalidades del _framework_ (interfaz web de administrador, CLI, registros...).
+
+# Lo que aprendí
+
+- Como estructurar y desarrollar un _framework_ moderno y complejo de Python
+- Técnicas para mejorar la experiencia de cara al desarrollador mediante elecciones en interfaz de programación, herramientas como CLIs y auto-configuración
+- Cómo realizar un sistema de pruebas funcionales complejo orquestrando entornos efímeros
+- A manejar el ciclo de vida completo de un paquete de código abierto de Python (CI/CD, versionado, publicación a PyPI...)
 
 # Enlaces
 

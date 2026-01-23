@@ -1,0 +1,47 @@
+{{- define "main" }}
+<section class="layout last:expansive">
+    <article>
+        {{- partial "content/header.html" . }}
+        
+        <div class="cnt mb-r-xl">
+            {{ .Content }}
+        </div>
+
+        <div class="flex flex-col gap-10">
+            {{- range site.Params.tech_categories }}
+                {{- $catID := .id }}
+                {{- $catName := i18n .name | default .name }}
+                
+                {{- $techs := where site.Params.technologies "category" $catID }}
+                {{- if $techs }}
+                <section class="tech-category">
+                    <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-neso-deco2">{{ $catName }}</h2>
+                    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8">
+                        {{- range $techs }}
+                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" 
+                               class="group relative flex flex-col items-center justify-center p-4 transition-all no-underline">
+                                
+                                <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-neso-bg2 text-neso-fg1 text-sm font-medium rounded-md border border-neso-deco2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
+                                    {{ i18n .name | default .name }}
+                                    <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-t border-l border-neso-deco2 rotate-45"></span>
+                                </span>
+
+                                {{- if .icon }}
+                                    <div class="w-16 h-16 flex items-center justify-center rounded-md shrink-0">
+                                        <i class="{{ .icon }} text-5xl group-hover:scale-125 transition-transform text-neso-fg1"></i>
+                                    </div>
+                                {{- else if .logo }}
+                                    <div class="w-16 h-16 flex items-center justify-center rounded-md p-1 shrink-0">
+                                        <img src="{{ .logo | relURL }}" alt="{{ .name }} logo" class="w-full h-full object-contain group-hover:scale-125 transition-transform">
+                                    </div>
+                                {{- end }}
+                            </a>
+                        {{- end }}
+                    </div>
+                </section>
+                {{- end }}
+            {{- end }}
+        </div>
+    </article>
+</section>
+{{- end }}
