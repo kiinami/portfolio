@@ -7,7 +7,7 @@ description: "Motor de render con OpenGL en C++"
 summary: "Motor de render con OpenGL en C++"
 keywords: ["OpenGL", "C++", "Motor de Render", "Deferred Rendering", "Forward Rendering", "Post-proceso", "ECS", "Gráficos 3D"]
 tags: ["Motor de render", "Post-proceso", "ECS"]
-techs: ["cpp", "opengl"]
+techs: ["cpp", "opengl", "glsl", "cmake", "git"]
 state: "paused"
 
 params:
