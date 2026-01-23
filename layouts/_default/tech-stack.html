@@ -20,34 +20,7 @@
                         {{- range $techs }}
                             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" 
                                class="group relative flex flex-col items-center justify-center p-4 transition-all no-underline">
-                                
-                                <span class="absolute top-full mt-2 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-neso-bg2 text-neso-fg1 text-sm font-medium rounded-md border border-neso-deco2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10">
-                                    {{ i18n .name | default .name }}
-                                    <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-t border-l border-neso-deco2 rotate-45"></span>
-                                </span>
-
-                                {{- if or .icon_light .icon_dark }}
-                                    <div class="w-16 h-16 flex items-center justify-center rounded-md shrink-0">
-                                        {{- if .icon_light }}
-                                            <img src="{{ .icon_light | relURL }}" alt="{{ .name }} light" class="w-full h-full object-contain group-hover:scale-125 transition-transform {{ if .icon_dark }}block dark:hidden{{ end }}">
-                                        {{- end }}
-                                        {{- if .icon_dark }}
-                                            <img src="{{ .icon_dark | relURL }}" alt="{{ .name }} dark" class="w-full h-full object-contain group-hover:scale-125 transition-transform {{ if .icon_light }}hidden dark:block{{ end }}">
-                                        {{- end }}
-                                    </div>
-                                {{- else if .logo }}
-                                    <div class="w-16 h-16 flex items-center justify-center rounded-md p-1 shrink-0">
-                                        <img src="{{ .logo | relURL }}" alt="{{ .name }} logo" class="w-full h-full object-contain group-hover:scale-125 transition-transform">
-                                    </div>
-                                {{- else if .icon }}
-                                    <div class="w-16 h-16 flex items-center justify-center rounded-md shrink-0">
-                                        {{- if or (strings.HasSuffix .icon ".svg") (strings.HasSuffix .icon ".png") (strings.HasSuffix .icon ".jpg") (strings.HasPrefix .icon "http") (strings.HasPrefix .icon "/") }}
-                                            <img src="{{ .icon | relURL }}" alt="{{ .name }} icon" class="w-full h-full object-contain group-hover:scale-125 transition-transform">
-                                        {{- else }}
-                                            <i class="{{ .icon }} text-5xl group-hover:scale-125 transition-transform text-neso-fg1"></i>
-                                        {{- end }}
-                                    </div>
-                                {{- end }}
+                                {{- partial "components/tech-icon.html" (dict "context" . "class" "w-16 h-16" "textClass" "text-5xl" "tooltipPos" "bottom") }}
                             </a>
                         {{- end }}
                     </div>

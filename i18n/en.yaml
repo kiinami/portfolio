@@ -99,7 +99,6 @@ tech_telegram: "Telegram Bot API"
 tech_postgresql: "PostgreSQL"
 tech_sqlite: "SQLite"
 tech_opengl: "OpenGL"
-tech_imgui: "Dear ImGui"
 tech_docker: "Docker"
 
 cat_design: "Design"

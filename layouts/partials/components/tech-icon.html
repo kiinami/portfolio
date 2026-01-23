@@ -1,0 +1,48 @@
+{{- $tConfig := .context }}
+{{- if .id }}
+    {{- $tConfigSlice := where site.Params.technologies "id" .id }}
+    {{- if gt (len $tConfigSlice) 0 }}
+        {{- $tConfig = index $tConfigSlice 0 }}
+    {{- end }}
+{{- end }}
+
+{{- if $tConfig }}
+    {{- $class := .class | default "w-6 h-6" }}
+    {{- $textClass := .textClass | default "text-xl" }}
+    {{- $tooltipPos := .tooltipPos | default "top" }}
+    
+    <div class="group relative flex items-center justify-center shrink-0 {{ $class }}" aria-label="{{ $tConfig.name }}">
+        
+        {{- /* Tooltip */}}
+        {{- $tooltipSideClass := "bottom-full mb-2" }}
+        {{- $arrowSideClass := "-bottom-1 border-b border-r" }} 
+        
+        {{- if eq $tooltipPos "bottom" }}
+             {{- $tooltipSideClass = "top-full mt-2" }}
+             {{- $arrowSideClass = "-top-1 border-t border-l" }}
+        {{- end }}
+
+        <span class="absolute {{ $tooltipSideClass }} left-1/2 -translate-x-1/2 px-2 py-1 bg-neso-bg2 text-neso-fg1 text-xs font-medium rounded border border-neso-deco2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
+            {{ i18n $tConfig.name | default $tConfig.name }}
+            <span class="absolute {{ $arrowSideClass }} left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-neso-deco2 rotate-45"></span>
+        </span>
+
+        {{- /* Icon content */}}
+        {{- if or $tConfig.icon_light $tConfig.icon_dark }}
+            {{- if $tConfig.icon_light }}
+                <img src="{{ $tConfig.icon_light | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain {{ if $tConfig.icon_dark }}block dark:hidden{{ end }}">
+            {{- end }}
+            {{- if $tConfig.icon_dark }}
+                <img src="{{ $tConfig.icon_dark | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain {{ if $tConfig.icon_light }}hidden dark:block{{ end }}">
+            {{- end }}
+        {{- else if $tConfig.logo }}
+            <img src="{{ $tConfig.logo | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain">
+        {{- else if $tConfig.icon }}
+            {{- if or (strings.HasSuffix $tConfig.icon ".svg") (strings.HasSuffix $tConfig.icon ".png") (strings.HasSuffix $tConfig.icon ".jpg") }}
+                <img src="{{ $tConfig.icon | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain">
+            {{- else }}
+                <i class="{{ $tConfig.icon }} {{ $textClass }} text-neso-fg1"></i>
+            {{- end }}
+        {{- end }}
+    </div>
+{{- end }}

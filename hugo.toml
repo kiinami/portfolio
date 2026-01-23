@@ -134,13 +134,6 @@ weight     = 60
   category = "frameworks"
 
 [[params.technologies]]
-  id = "imgui"
-  name = "tech_imgui"
-  icon = "devicon-cplusplus-plain"
-  url = "https://github.com/ocornut/imgui"
-  category = "frameworks"
-
-[[params.technologies]]
   id = "docker"
   name = "tech_docker"
   icon = "devicon-docker-plain"

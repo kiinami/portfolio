@@ -5,9 +5,9 @@ slug: "lisa"
 
 description: "Simple OpenGL render engine in C++"
 summary: "Simple OpenGL render engine in C++"
-keywords: ["OpenGL", "C++", "Render Engine", "Deferred Rendering", "Forward Rendering", "Post-processing", "ImGUI", "ECS", "3D Graphics"]
-tags: ["C++", "OpenGL", "ImGUI", "Post-processing", "ECS"]
-techs: ["cpp", "opengl", "imgui"]
+keywords: ["OpenGL", "C++", "Render Engine", "Deferred Rendering", "Forward Rendering", "Post-processing", "ECS", "3D Graphics"]
+tags: ["Render engine", "Post-processing", "ECS"]
+techs: ["cpp", "opengl", "cmake"]
 state: "paused"
 
 params:
@@ -25,7 +25,7 @@ Lisa is an OpenGL render engine written in C++ for the 3D Graphics course at Rey
 
 The main focus of the project was to learn the structure and architecture of a modern render engine, how components interact with each other, and what abstractions need to be made.
 
-The project implements a render engine both with forward and deferred rendering, ECS-based scene definition, a complete modular post-processing engine and a simple interface using ImGUI to control some of the parameters of the scene.
+The project implements a render engine both with forward and deferred rendering, ECS-based scene definition, a complete modular post-processing engine and a simple interface to control some of the parameters of the scene.
 
 # My Work
 
