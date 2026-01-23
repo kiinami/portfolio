@@ -5,9 +5,9 @@ slug: "lisa"
 
 description: "Motor de render con OpenGL en C++"
 summary: "Motor de render con OpenGL en C++"
-keywords: ["OpenGL", "C++", "Motor de Render", "Deferred Rendering", "Forward Rendering", "Post-proceso", "ImGUI", "ECS", "Gráficos 3D"]
-tags: ["C++", "OpenGL", "ImGUI", "Post-proceso", "ECS"]
-techs: ["cpp", "opengl", "imgui"]
+keywords: ["OpenGL", "C++", "Motor de Render", "Deferred Rendering", "Forward Rendering", "Post-proceso", "ECS", "Gráficos 3D"]
+tags: ["Motor de render", "Post-proceso", "ECS"]
+techs: ["cpp", "opengl"]
 state: "paused"
 
 params:
@@ -25,7 +25,7 @@ Lisa es un motor de render con OpenGL en C++, realizado para la asignatura de Gr
 
 El objetivo principal del proyecto es entender la estructura y arquitectura tanto de un proyecto de C++ como de un motor de render moderno.
 
-El proyecto implementa un motor de render con tanto _forward_ como _deferred_ rendering, definición de escenas basado en ECS, una _pipeline_ de post-proceso completa totalmente modular y una interfaz simple utilizando ImGUI.
+El proyecto implementa un motor de render con tanto _forward_ como _deferred_ rendering, definición de escenas basado en ECS, una _pipeline_ de post-proceso completa totalmente modular y una interfaz simple.
 
 # Mi trabajo
 

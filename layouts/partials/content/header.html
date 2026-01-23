@@ -72,6 +72,16 @@
                     {{- partial "content/metadata.html" . }}
                     {{- partial "content/translations.html" . }}
                 </div>
+
+                {{- /* Tech Stack Icons */}}
+                {{- if .Params.techs }}
+                <div class="mt-3 flex flex-wrap gap-3 items-center">
+                    {{- range .Params.techs }}
+                        {{- partial "components/tech-icon.html" (dict "id" .) }}
+                    {{- end }}
+                </div>
+                {{- end }}
+
                 <div>
                     {{- partial "content/canonical_links.html" . }}
                 </div>
