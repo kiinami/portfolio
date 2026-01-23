@@ -6,9 +6,11 @@ slug: "lisa"
 description: "Motor de render con OpenGL en C++"
 summary: "Motor de render con OpenGL en C++"
 keywords: ["OpenGL", "C++", "Motor de Render", "Deferred Rendering", "Forward Rendering", "Post-proceso", "ECS", "Gráficos 3D"]
-tags: ["Motor de render", "Post-proceso", "ECS"]
 techs: ["cpp", "opengl", "glsl", "cmake", "git"]
 state: "paused"
+links:
+  - name: "GitHub"
+    url: "https://github.com/kiinami/lisa"
 
 params:
   neso:
@@ -40,7 +42,3 @@ El resto lo dediqué sobre todo a construir una _pipeline_ de post-proceso que p
 - Cómo se estructuran tanto los proyectos modernos en C++ como un motor simple de render
 - Cómo funciona y cómo implementar una _pipeline_ de post-proceso compleja en motores de render
 - Técnicas de C++ para tener un programa eficiente y que gestione correctamente sus recursos
-
-# Enlaces
-
-{{< gh-repo "kiinami/lisa" >}}

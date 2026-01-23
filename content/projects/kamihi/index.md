@@ -7,8 +7,12 @@ state: "in progress"
 description     : "Python framework for Telegram bot development and management"
 summary         : "Python framework for Telegram bot development and management"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
-tags            : ["Framework", "Webapp"]
 techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github_actions"]
+links:
+  - name: "GitHub"
+    url: "https://github.com/kamihi-org/kamihi"
+  - name: "Docs"
+    url: "https://kamihi-org.github.io/kamihi/latest/"
 
 params:
   neso:
@@ -44,10 +48,3 @@ I also put significant work into the end-to-end testing framework. With the help
 - Techniques for improving developer experience via programming interface choices, CLI tooling and auto-configuration
 - How to orchestrate ephemeral environments for automated end-to-end testing
 - Managing the full lifecycle of an Open Source Python package (CI/CD, semantic versioning, PyPI)
-
-# Links
-
-{{< gh-repo "kamihi-org/kamihi" >}}
-
-Documentation: https://kamihi-org.github.io/kamihi/latest/
-

@@ -5,7 +5,8 @@
     {{- partial "breadcrumbs.html" . }}
 
     <hgroup class="not-last:mb-r-md">
-        <h1 class="flex items-center not-last:mb-r-md hyphens-auto font-bold text-3xl md:text-4xl text-neso-fg1">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 not-last:mb-r-md">
+            <h1 class="flex items-center hyphens-auto font-bold text-3xl md:text-4xl text-neso-fg1">
             {{- if .Draft }}
                 <span class="flex order-last items-center gap-1
                              ms-auto px-2 py-1
@@ -48,7 +49,19 @@
                     {{- end }}
                 {{- end }}
             {{- end }}
-        </h1>
+            </h1>
+            {{- if .Params.links }}
+                <div class="flex flex-wrap gap-2">
+                {{- range .Params.links }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 text-base rounded-md font-normal align-middle border border-neso-deco2 hover:text-neso-splash flex items-center gap-2 no-underline" style="background-color: var(--color-neso-bg2);">
+                        {{ .name }}
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs" aria-hidden="true"></i>
+                        <span class="sr-only">(external link)</span>
+                    </a>
+                {{- end }}
+                </div>
+            {{- end }}
+        </div>
         {{- if not site.Params.neso.page.hide_description_in_single }}
             {{- with .Description }}
                 <div class="text-lg md:text-xl">
@@ -70,7 +83,9 @@
             <div class="text-neso-fg3">
                 <div class="flex flex-wrap items-baseline">
                     {{- partial "content/metadata.html" . }}
-                    {{- partial "content/translations.html" . }}
+                    {{- if ne .Section "projects" }}
+                        {{- partial "content/translations.html" . }}
+                    {{- end }}
                 </div>
 
                 {{- /* Tech Stack Icons */}}
