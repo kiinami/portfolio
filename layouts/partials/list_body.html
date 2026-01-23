@@ -1,0 +1,215 @@
+{{- $ctx       := .ctx       | default . }}
+{{- $paginator := .paginator | default false }}
+
+{{- with .ctx }}
+
+    {{- $uiIcons := partialCached "_funcs/get-ui-icons.html" . }}
+
+    {{- $term := .Data.Term }}
+
+    {{- /* Project States Filter */}}
+    {{- if and (eq .Section "projects") (not .IsHome) }}
+    <div class="mb-6 flex justify-start relative z-20">
+        <details class="relative group">
+            <summary class="btn cursor-pointer list-none flex items-center gap-2 px-4 py-1.5 bg-neso-bg0 rounded-lg shadow-sm border border-neso-deco2 hover:border-neso-fg1 transition text-sm font-medium">
+                <span>{{ i18n "filter_states" | default "Filter States" }}</span>
+                <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </summary>
+            
+            <div class="absolute left-0 mt-2 w-48 origin-top-left rounded-md bg-neso-bg0 border border-neso-deco2 shadow-lg p-2 flex flex-col gap-1">
+                <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                    <input type="checkbox" class="state-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="all" checked>
+                    <span class="text-sm font-medium">{{ i18n "all" | default "All" }}</span>
+                </label>
+                <hr class="border-neso-deco2 my-1">
+                {{- range $state, $config := site.Params.project_states }}
+                    <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                        <input type="checkbox" class="state-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="{{ $state }}">
+                        <span class="text-sm">{{ i18n $state | default ($state | title) }}</span>
+                    </label>
+                {{- end }}
+            </div>
+        </details>
+    </div>
+    {{- end }}
+
+    {{- range $index, $page := $paginator.Pages }}
+
+        {{- $heroEntry := site.Params.neso.list.prominent_first_entry }}
+        {{- $isHero := and $heroEntry (or $ctx.IsHome (eq $ctx.Kind "section")) (eq $index 0) (eq $paginator.PageNumber 1) }}
+
+        <article class="project-item relative isolate
+                        flex flex-col gap-5
+                        {{ cond $isHero "first-entry" "md:flex-row" }}
+                        mb-r-lg p-4 md:p-5 rounded-2xl
+                        transition bg-neso-bg0"
+                 data-state="{{ .Params.state | default "unknown" | lower }}">
+            {{- $siteHideCover := site.Params.neso.list.hide_cover_image }}
+            {{- $coverHidden := cond $siteHideCover true (.Params.neso.cover.hidden_in_list) }}
+
+
+            {{- if and .Params.neso.cover.image (not $coverHidden) }}
+                <figure class="{{- cond $isHero "" "md:order-last md:basis-1/3 md:grow-0 md:shrink-0 md:my-auto " -}}
+                               [&_img]:mx-auto [&_img]:rounded-sm">
+                    {{- partial "content/cover.html" (dict "ctx" . "IsSingle" false "isHero" (eq $index 0)) }}
+                </figure>
+            {{- end }}
+
+            <div class="flex flex-col basis-full
+                        wrap-anywhere">
+                <header class="mb-r-sm last:mb-0">
+                    <h2 class="flex flex-col content-start hyphens-auto {{- cond $isHero " text-2xl md:text-3xl" " text-xl md:text-2xl" }}">
+                        {{- if .Draft }}
+                            <span class="flex order-last items-center gap-1
+                                         mt-1 me-auto px-2 py-0.5
+                                         text-neso-fg3 bg-neso-bg2 border-1 border-neso-deco2 rounded-md">
+                                <svg class="size-4 stroke-2 stroke-current fill-none" aria-hidden="true">
+                                    <use href="{{ $uiIcons.RelPermalink }}#feather" />
+                                </svg>
+                                <span class="font-medium hidden sm:inline text-sm">
+                                    {{ i18n "draft" | default "Draft" }}
+                                </span>
+                            </span>
+                        {{- end }}
+                        <div class="flex items-center flex-wrap"> 
+                            <a class="ui-link hover:text-neso-splash focus-visible:text-neso-splash font-semibold after:absolute after:inset-0 after:z-10 after:content-['']"
+                            href="{{ .RelPermalink }}"
+                            aria-label="{{ i18n "entry_link_aria" (dict "Title" (.Title | plainify)) | default (printf "Read “%s”" (.Title | plainify)) }}">
+                                {{ .Title }}
+                            </a>
+                            {{- /* Custom State Logic */}}
+                            {{- $state := .Params.state | default "" | lower }}
+                            {{- $stateConfig := index site.Params.project_states $state }}
+                            {{- if $stateConfig }}
+                                {{- $stateText := i18n $state | default ($state | title) }}
+                                <span class="inline-block w-3 h-3 rounded-full ms-2 shrink-0 mb-0.5" style="background-color: {{ $stateConfig.bg }};" title="{{ $stateText }}"></span>
+                            {{- end }}
+                        </div>
+                    </h2>
+                </header>
+
+                {{- if not site.Params.neso.list.hide_summary }}
+                    <div class="mb-r-sm last:mb-0 {{- cond $isHero " text-lg" " text-base" }}">
+                        <p>{{- .Summary | plainify | htmlUnescape -}}{{- if .Truncated -}}...{{- end -}}</p>
+                    </div>
+                {{- end }}
+
+                {{- $siteHideMeta := site.Params.neso.page.hide_metadata }}
+                {{- $hideMeta := $siteHideMeta }}
+                {{- with .Params.neso }}
+                    {{- with index . "hide_metadata" }}
+                        {{- $hideMeta = . }}
+                    {{- end }}
+                {{- end }}
+                {{- if not $hideMeta }}
+                    <footer class="flex flex-wrap items-baseline text-sm text-neso-fg3 {{- cond $isHero "" " md:mt-auto" }}">
+                        {{- partial "content/metadata.html" . }}
+                    </footer>
+                {{- end }}
+            </div>
+        </article>
+    {{- end }}
+
+    {{- if gt $paginator.TotalPages 1 }}
+        <footer>
+            <nav class="flex flex-nowrap justify-between items-center">
+                <a class="btn p-3 rounded-full {{- if not $paginator.HasPrev }} text-neso-fg3/50 bg-neso-bg2/72{{- end }}"
+                   role="button"
+                   aria-label="{{ i18n "prev_page" }}"
+                   {{- if $paginator.HasPrev }}
+                   href="{{ $.paginator.Prev.URL }}"
+                   {{- else }}
+                   aria-disabled="true"
+                   {{- end }}>
+                    <svg class="rtl:hidden size-6 stroke-2 stroke-current fill-none -ml-px mr-px" aria-hidden="true">
+                        <use href="{{ $uiIcons.RelPermalink }}#chevron-left" />
+                    </svg>
+                    <svg class="ltr:hidden size-6 stroke-2 stroke-current fill-none -mr-px ml-px" aria-hidden="true">
+                        <use href="{{ $uiIcons.RelPermalink }}#chevron-right" />
+                    </svg>
+                </a>
+                {{- if not .Params.neso.list.hide_page_nums }}
+                    <span dir="ltr" class="flex flex-nowrap gap-2 items-center text-lg text-neso-fg3">
+                        <span class="font-medium text-neso-fg1">{{ $paginator.PageNumber }}</span>
+                        <span class="text-base">/</span>
+                        <span class="">{{ $paginator.TotalPages }}</span>
+                    </span>
+                {{- end }}
+                <a class="btn p-3 rounded-full {{- if not $paginator.HasNext }} text-neso-fg3/50 bg-neso-bg2/72{{- end }}"
+                   role="button"
+                   aria-label="{{ i18n "next_page" }}"
+                   {{- if $paginator.HasNext }}
+                   href="{{ $.paginator.Next.URL }}"
+                   {{- else }}
+                   aria-disabled="true"
+                   {{- end }}>
+                    <svg class="rtl:hidden size-6 stroke-2 stroke-current fill-none -mr-px ml-px" aria-hidden="true">
+                        <use href="{{ $uiIcons.RelPermalink }}#chevron-right" />
+                    </svg>
+                    <svg class="ltr:hidden size-6 stroke-2 stroke-current fill-none -ml-px mr-px" aria-hidden="true">
+                        <use href="{{ $uiIcons.RelPermalink }}#chevron-left" />
+                    </svg>
+                </a>
+            </nav>
+        </footer>
+    {{- end }}
+
+{{- end }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('.state-filter');
+        const articles = document.querySelectorAll('.project-item');
+
+        if (checkboxes.length === 0) return;
+
+        function updateVisibility() {
+            const checkedValues = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+                
+            const isAll = checkedValues.includes('all');
+
+            articles.forEach(article => {
+                const state = article.getAttribute('data-state');
+                if (isAll || checkedValues.includes(state)) {
+                    article.style.display = '';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const isChecked = e.target.checked;
+                const value = e.target.value;
+
+                if (value === 'all') {
+                    if (isChecked) {
+                        checkboxes.forEach(c => {
+                            if (c !== e.target) c.checked = false;
+                        });
+                    } else {
+                        const anyOtherChecked = Array.from(checkboxes).some(c => c !== e.target && c.checked);
+                        if (!anyOtherChecked) {
+                            e.target.checked = true;
+                        }
+                    }
+                } else {
+                    if (isChecked) {
+                        const allCb = document.querySelector('.state-filter[value="all"]');
+                        if (allCb) allCb.checked = false;
+                    } else {
+                        const anyChecked = Array.from(checkboxes).some(c => c.checked);
+                        if (!anyChecked) {
+                            const allCb = document.querySelector('.state-filter[value="all"]');
+                            if (allCb) allCb.checked = true;
+                        }
+                    }
+                }
+                updateVisibility();
+            });
+        });
+    });
+</script>
