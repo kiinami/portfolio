@@ -199,7 +199,7 @@ weight     = 60
 [[params.technologies]]
   id = "unity"
   name = "tech_unity"
-  icon = "devicon-unity-original"
+  icon = "devicon-unity-plain"
   url = "https://unity.com/"
   category = "frameworks"
 
@@ -283,7 +283,8 @@ weight     = 60
 [[params.technologies]]
   id = "linear"
   name = "tech_linear"
-  icon = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/linear-dark.svg"
+  icon_dark = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/linear-dark.svg"
+  icon_light = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/linear.svg"
   url = "https://linear.app/"
   category = "tools"
 

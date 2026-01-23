@@ -26,13 +26,26 @@
                                     <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-t border-l border-neso-deco2 rotate-45"></span>
                                 </span>
 
-                                {{- if .icon }}
+                                {{- if or .icon_light .icon_dark }}
                                     <div class="w-16 h-16 flex items-center justify-center rounded-md shrink-0">
-                                        <i class="{{ .icon }} text-5xl group-hover:scale-125 transition-transform text-neso-fg1"></i>
+                                        {{- if .icon_light }}
+                                            <img src="{{ .icon_light | relURL }}" alt="{{ .name }} light" class="w-full h-full object-contain group-hover:scale-125 transition-transform {{ if .icon_dark }}block dark:hidden{{ end }}">
+                                        {{- end }}
+                                        {{- if .icon_dark }}
+                                            <img src="{{ .icon_dark | relURL }}" alt="{{ .name }} dark" class="w-full h-full object-contain group-hover:scale-125 transition-transform {{ if .icon_light }}hidden dark:block{{ end }}">
+                                        {{- end }}
                                     </div>
                                 {{- else if .logo }}
                                     <div class="w-16 h-16 flex items-center justify-center rounded-md p-1 shrink-0">
                                         <img src="{{ .logo | relURL }}" alt="{{ .name }} logo" class="w-full h-full object-contain group-hover:scale-125 transition-transform">
+                                    </div>
+                                {{- else if .icon }}
+                                    <div class="w-16 h-16 flex items-center justify-center rounded-md shrink-0">
+                                        {{- if or (strings.HasSuffix .icon ".svg") (strings.HasSuffix .icon ".png") (strings.HasSuffix .icon ".jpg") (strings.HasPrefix .icon "http") (strings.HasPrefix .icon "/") }}
+                                            <img src="{{ .icon | relURL }}" alt="{{ .name }} icon" class="w-full h-full object-contain group-hover:scale-125 transition-transform">
+                                        {{- else }}
+                                            <i class="{{ .icon }} text-5xl group-hover:scale-125 transition-transform text-neso-fg1"></i>
+                                        {{- end }}
                                     </div>
                                 {{- end }}
                             </a>
