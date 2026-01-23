@@ -8,7 +8,7 @@ description     : "Python framework for Telegram bot development and management"
 summary         : "Python framework for Telegram bot development and management"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
 tags            : ["Framework", "Webapp"]
-techs           : ["python", "telegram", "postgresql", "sqlite", "docker"]
+techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github_actions"]
 
 params:
   neso:

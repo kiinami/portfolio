@@ -7,7 +7,7 @@ description: "Simple OpenGL render engine in C++"
 summary: "Simple OpenGL render engine in C++"
 keywords: ["OpenGL", "C++", "Render Engine", "Deferred Rendering", "Forward Rendering", "Post-processing", "ECS", "3D Graphics"]
 tags: ["Render engine", "Post-processing", "ECS"]
-techs: ["cpp", "opengl", "cmake"]
+techs: ["cpp", "opengl", "glsl", "cmake", "git"]
 state: "paused"
 
 params:

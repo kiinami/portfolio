@@ -8,7 +8,7 @@ description     : "Framework de código abierto para el desarrollo y manejo de b
 summary         : "Framework de código abierto para el desarrollo y manejo de bots de Telegram en Python"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
 tags            : ["Framework", "Webapp"]
-techs           : ["python", "telegram", "postgresql", "sqlite", "docker"]
+techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github_actions"]
 
 params:
   neso:
