@@ -46,12 +46,6 @@ name       = "Tech Stack"
 pageRef    = "/stack"
 weight     = 55
 
-[[menus.main]]
-identifier = "github"
-name       = "GitHub"
-url        = "https://github.com/kiinami"
-weight     = 60
-
 [[languages.es.menus.main]]
 identifier = "projects"
 name       = "Proyectos destacados"
@@ -63,12 +57,6 @@ identifier = "stack"
 name       = "Tecnologías"
 pageRef    = "/stack"
 weight     = 55
-
-[[languages.es.menus.main]]
-identifier = "github"
-name       = "GitHub"
-url        = "https://github.com/kiinami"
-weight     = 60
 
 # Tech Stack Categories
 # --------------------------------
@@ -336,6 +324,9 @@ home.profile.avatar_image_alt_text = "Avatar image"
 [[params.neso.social.links]]
     name = "LinkedIn"
     url  = "https://www.linkedin.com/in/juan-pedro-galvez"
+[[params.neso.social.links]]
+    name = "Email"
+    url  = "mailto:contact@jpgl.es"
 
 [params.neso.home.list]
 featured_entries_limit = 4

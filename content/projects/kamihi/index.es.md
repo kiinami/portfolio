@@ -7,8 +7,12 @@ state: "in progress"
 description     : "Framework de código abierto para el desarrollo y manejo de bots de Telegram en Python"
 summary         : "Framework de código abierto para el desarrollo y manejo de bots de Telegram en Python"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
-tags            : ["Framework", "Webapp"]
 techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github_actions"]
+links:
+  - name: "GitHub"
+    url: "https://github.com/kamihi-org/kamihi"
+  - name: "Documentación"
+    url: "https://kamihi-org.github.io/kamihi/latest/"
 
 params:
   neso:
@@ -46,9 +50,3 @@ También he puesto bastante esfuerzo en el _framework_ de pruebas. Con ayuda de 
 - Técnicas para mejorar la experiencia de cara al desarrollador mediante elecciones en interfaz de programación, herramientas como CLIs y auto-configuración
 - Cómo realizar un sistema de pruebas funcionales complejo orquestrando entornos efímeros
 - A manejar el ciclo de vida completo de un paquete de código abierto de Python (CI/CD, versionado, publicación a PyPI...)
-
-# Enlaces
-
-{{< gh-repo "kamihi-org/kamihi" >}}
-
-Documentación: https://kamihi-org.github.io/kamihi/latest/

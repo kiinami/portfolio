@@ -6,9 +6,11 @@ slug: "lisa"
 description: "Simple OpenGL render engine in C++"
 summary: "Simple OpenGL render engine in C++"
 keywords: ["OpenGL", "C++", "Render Engine", "Deferred Rendering", "Forward Rendering", "Post-processing", "ECS", "3D Graphics"]
-tags: ["Render engine", "Post-processing", "ECS"]
 techs: ["cpp", "opengl", "glsl", "cmake", "git"]
 state: "paused"
+links:
+  - name: "GitHub"
+    url: "https://github.com/kiinami/lisa"
 
 params:
   neso:
@@ -41,6 +43,3 @@ The rest was dedicated to building a post-processing engine that could handle an
 - How post-processing works in modern render engines
 - C++ techniques for efficiency and correct resource management
 
-# Links
-
-{{< gh-repo "kiinami/lisa" >}}
