@@ -357,8 +357,8 @@ time_format = "2 de January de 2006"
 # Project States
 # --------------------------------
 [params.project_states]
-  "in progress" = { bg = "#3b82f6", text = "#ffffff" }
-  "finished"    = { bg = "#22c55e", text = "#ffffff" }
+  "in progress" = { bg = "#22c55e", text = "#ffffff" }
+  "finished"    = { bg = "#3b82f6", text = "#ffffff" }
   "dropped"     = { bg = "#ef4444", text = "#ffffff" }
   "paused"      = { bg = "#6b7280", text = "#ffffff" }
 
