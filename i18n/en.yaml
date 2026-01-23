@@ -89,7 +89,7 @@ filter_states: "Filter States"
 # Categories
 cat_api_languages: "Programming Languages"
 cat_frameworks: "Frameworks & Libraries"
-cat_tools: "Tools & Concepts"
+cat_tools: "Tools"
 cat_db: "Databases"
 
 # Technologies
