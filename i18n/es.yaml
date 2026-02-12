@@ -133,3 +133,11 @@ tech_cmake: "CMake"
 tech_glsl: "GLSL"
 tech_copilot: "GitHub Copilot"
 tech_github: "GitHub"
+tech_ffmpeg: "FFmpeg"
+
+# Timeline
+timeline_work: "Trabajo"
+timeline_education: "Educación"
+timeline_certification: "Certificación"
+filter_timeline_type: "Filtrar tipo"
+present: "Actualidad"

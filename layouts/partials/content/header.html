@@ -83,9 +83,7 @@
             <div class="text-neso-fg3">
                 <div class="flex flex-wrap items-baseline">
                     {{- partial "content/metadata.html" . }}
-                    {{- if ne .Section "projects" }}
-                        {{- partial "content/translations.html" . }}
-                    {{- end }}
+                    {{- partial "content/translations.html" . }}
                 </div>
 
                 {{- /* Tech Stack Icons */}}

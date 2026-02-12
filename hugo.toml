@@ -46,6 +46,12 @@ name       = "Tech Stack"
 pageRef    = "/stack"
 weight     = 55
 
+[[menus.main]]
+identifier = "timeline"
+name       = "Timeline"
+pageRef    = "/timeline"
+weight     = 40
+
 [[languages.es.menus.main]]
 identifier = "projects"
 name       = "Proyectos destacados"
@@ -57,6 +63,12 @@ identifier = "stack"
 name       = "Tecnologías"
 pageRef    = "/stack"
 weight     = 55
+
+[[languages.es.menus.main]]
+identifier = "timeline"
+name       = "Cronología"
+pageRef    = "/timeline"
+weight     = 40
 
 # Tech Stack Categories
 # --------------------------------

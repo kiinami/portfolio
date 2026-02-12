@@ -1,0 +1,107 @@
+{{- define "main" }}
+<section class="layout last:expansive">
+    <article>
+        {{- partial "content/header.html" . }}
+
+        {{- if .Content }}
+        <div class="cnt mb-r-xl">
+            {{ .Content }}
+        </div>
+        {{- end }}
+
+        {{- /* Type Filter */}}
+        <div class="mb-6 flex justify-start relative z-20">
+            <details class="relative group">
+                <summary class="btn cursor-pointer list-none flex items-center gap-2 px-4 py-1.5 bg-neso-bg0 rounded-lg shadow-sm border border-neso-deco2 hover:border-neso-fg1 transition text-sm font-medium">
+                    <span>{{ i18n "filter_timeline_type" | default "Filter Type" }}</span>
+                    <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </summary>
+
+                <div class="absolute left-0 mt-2 w-48 origin-top-left rounded-md bg-neso-bg0 border border-neso-deco2 shadow-lg p-2 flex flex-col gap-1">
+                    <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                        <input type="checkbox" class="type-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="all" checked>
+                        <span class="text-sm font-medium">{{ i18n "all" | default "All" }}</span>
+                    </label>
+                    <hr class="border-neso-deco2 my-1">
+                    <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                        <input type="checkbox" class="type-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="work">
+                        <span class="text-sm">{{ i18n "timeline_work" | default "Work" }}</span>
+                    </label>
+                    <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                        <input type="checkbox" class="type-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="education">
+                        <span class="text-sm">{{ i18n "timeline_education" | default "Education" }}</span>
+                    </label>
+                    <label class="flex items-center gap-2 px-2 py-1.5 hover:bg-neso-bg2 rounded cursor-pointer select-none">
+                        <input type="checkbox" class="type-filter rounded border-neso-fg3 text-neso-splash focus:ring-neso-splash accent-neso-splash" value="certification">
+                        <span class="text-sm">{{ i18n "timeline_certification" | default "Certification" }}</span>
+                    </label>
+                </div>
+            </details>
+        </div>
+
+        {{- /* Timeline Container */}}
+        <div class="relative">
+            {{- /* Vertical timeline line */}}
+            <div class="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-neso-deco2 -z-10"></div>
+
+            {{- /* Sort entries by date (most recent first) */}}
+            {{- $entries := .RegularPages }}
+            {{- $entries = $entries.ByDate.Reverse }}
+
+            <div class="flex flex-col gap-8 md:gap-12">
+                {{- range $index, $entry := $entries }}
+                    {{- partial "components/timeline-entry.html" (dict "ctx" $entry "index" $index) }}
+                {{- end }}
+            </div>
+        </div>
+    </article>
+</section>
+
+{{- /* Filter JavaScript */}}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkboxes = document.querySelectorAll('.type-filter');
+        const entries = document.querySelectorAll('.timeline-item');
+
+        if (checkboxes.length === 0) return;
+
+        function updateVisibility() {
+            const checkedValues = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.value);
+            const isAll = checkedValues.includes('all');
+
+            entries.forEach(entry => {
+                const type = entry.getAttribute('data-type');
+                if (isAll || checkedValues.includes(type)) {
+                    entry.style.display = '';
+                } else {
+                    entry.style.display = 'none';
+                }
+            });
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', (e) => {
+                const value = e.target.value;
+                const isChecked = e.target.checked;
+
+                if (value === 'all') {
+                    if (isChecked) {
+                        checkboxes.forEach(c => {
+                            if (c !== e.target) c.checked = false;
+                        });
+                    }
+                } else {
+                    if (isChecked) {
+                        document.querySelector('.type-filter[value="all"]').checked = false;
+                    }
+                }
+                updateVisibility();
+            });
+        });
+    });
+</script>
+{{- end }}

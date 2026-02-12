@@ -1,0 +1,67 @@
+{{- $ctx := .ctx }}
+{{- $index := .index }}
+{{- $isEven := eq (mod $index 2) 0 }}
+
+{{- /* Calculate date display */}}
+{{- $dateRange := "" }}
+{{- with $ctx.Params.customDate }}
+    {{- /* Use custom date if provided */}}
+    {{- $dateRange = . }}
+{{- else }}
+    {{- /* Calculate date range automatically */}}
+    {{- $startDate := $ctx.Date.Format "Jan 2006" }}
+    {{- $endDate := "" }}
+    {{- with $ctx.Params.endDate }}
+        {{- $endDate = (time .).Format "Jan 2006" }}
+    {{- else }}
+        {{- $endDate = i18n "present" | default "Present" }}
+    {{- end }}
+    {{- $dateRange = printf "%s - %s" $startDate $endDate }}
+{{- end }}
+
+<article class="timeline-item relative flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-0"
+         data-type="{{ $ctx.Params.type | default "work" }}">
+
+    {{- /* Mobile/Tablet: Simple left-aligned layout */}}
+    <div class="md:hidden w-full pl-16 pr-4">
+        <div class="bg-neso-bg0 rounded-2xl p-5 border border-neso-deco2 transition hover:border-neso-splash">
+            {{- /* Timeline dot */}}
+            <div class="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full bg-neso-splash border-4 border-neso-bg1"></div>
+
+            {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange) }}
+        </div>
+    </div>
+
+    {{- /* Desktop: Alternating left/right layout */}}
+    <div class="hidden md:flex w-full items-center gap-8">
+        {{- if $isEven }}
+            {{- /* Left side entry */}}
+            <div class="w-1/2 text-right pr-8">
+                <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash">
+                    {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange "align" "right") }}
+                </div>
+            </div>
+
+            {{- /* Center dot */}}
+            <div class="relative flex-shrink-0">
+                <div class="w-5 h-5 rounded-full bg-neso-splash border-4 border-neso-bg1 z-10"></div>
+            </div>
+
+            <div class="w-1/2"></div>
+        {{- else }}
+            {{- /* Right side entry */}}
+            <div class="w-1/2"></div>
+
+            {{- /* Center dot */}}
+            <div class="relative flex-shrink-0">
+                <div class="w-5 h-5 rounded-full bg-neso-splash border-4 border-neso-bg1 z-10"></div>
+            </div>
+
+            <div class="w-1/2 text-left pl-8">
+                <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash">
+                    {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange "align" "left") }}
+                </div>
+            </div>
+        {{- end }}
+    </div>
+</article>
