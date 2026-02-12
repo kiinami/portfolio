@@ -7,7 +7,7 @@ state: "in progress"
 description     : "Python framework for Telegram bot development and management"
 summary         : "Python framework for Telegram bot development and management"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
-techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github_actions"]
+techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github", "github_actions"]
 links:
   - name: "GitHub"
     url: "https://github.com/kamihi-org/kamihi"
