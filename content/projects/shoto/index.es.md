@@ -20,7 +20,7 @@ params:
   neso:
     show_toc: false
     cover:
-      image: "header.png"
+      image: "img/shoto-0.png"
       alt_text: "<cover alt text>"
       hidden_in_single : false
 ---
@@ -44,8 +44,11 @@ También trabajé como escritor del juego, diseñando la historia (poca, pero la
 
 # Galería
 
-![Shoto 1](header.png)
-![Shoto 2](shoto-1.png)
-![Shoto 3](shoto-2.png)
-![Shoto 4](shoto-3.png)
-![Shoto 5](shoto-4.png)
+{{< gallery hover-effect="none" caption-effect="appear" >}} {{< load-photoswipe >}}
+{{< picture src="img/shoto-0.png" caption="Título" >}}
+{{< picture src="img/shoto-1.png" caption="En la isla" >}}
+{{< picture src="img/shoto-2.png" caption="La señora de las ratas" >}}
+{{< picture src="img/shoto-3.png" caption="Pescando" >}}
+{{< picture src="img/shoto-4.png" caption="Perdido, pero navegándolo" >}}
+{{< /gallery >}}
+

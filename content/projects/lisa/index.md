@@ -16,7 +16,7 @@ params:
   neso:
     show_toc: false
     cover:
-      image: "header.png"
+      image: "img/header.png"
       alt_text: "<cover alt text>"
       hidden_in_single : true
 ---

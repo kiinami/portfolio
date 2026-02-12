@@ -16,7 +16,7 @@ params:
   neso:
     show_toc: false
     cover:
-      image: "header.png"
+      image: "img/1-home.png"
       alt_text: "Main page of KWC"
       hidden_in_single : false
 ---
@@ -49,8 +49,10 @@ I also added an optional and configurable deduplication step to further reduce t
 
 # Gallery
 
-![The home page](header.png)
-![The inbox for newly extracted frames to classify](kwc-inbox.png)
-![The extraction form](kwc-extraction.png)
-![The choose interface on desktop](kwc-choose.png)
-![The swipe to choose interface on mobile](kwc-choose-mobile.png)
+{{< gallery hover-effect="none" caption-effect="appear" >}} {{< load-photoswipe >}}
+{{< picture src="img/1-home.png" caption="The home page" >}}
+{{< picture src="img/2-extraction.png" caption="The extraction form" >}}
+{{< picture src="img/3-inbox.png" caption="The inbox for newly extracted frames to classify" >}}
+{{< picture src="img/4-choose.png" caption="The choose interface on desktop" >}}
+{{< picture src="img/5-choose-mobile.png" caption="The swipe to choose interface on mobile" >}}
+{{< /gallery >}}
