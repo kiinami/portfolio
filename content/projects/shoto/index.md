@@ -5,7 +5,7 @@ slug: "shoto"
 
 description: "Relaxing sailing adventure game where players navigate a wind-swept archipelago to fish, trade resources, and upgrade their vessel."
 summary: "Relaxing sailing adventure game where players navigate a wind-swept archipelago to fish, trade resources, and upgrade their vessel."
-keywords: [""]
+keywords: ["shoto", "sailing", "adventure", "indie game", "unity", "c#", "fishing", "exploration"]
 techs: ["unity", "csharp"]
 state: "finished"
 links:

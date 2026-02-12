@@ -6,7 +6,7 @@ slug: "shoto"
 description: "Juego relajante de aventuras en velero donde los jugadores navegan por un archipiélago azotado por el viento para pescar, comerciar recursos y mejorar su embarcación."
 summary: "Juego relajante de aventuras en velero donde los jugadores navegan por un archipiélago azotado por el viento para pescar, comerciar recursos y mejorar su embarcación."
 
-keywords: [""]
+keywords: ["shoto", "vela", "aventura", "juego indie", "unity", "c#", "pesca", "exploración"]
 techs: ["unity", "csharp"]
 state: "finished"
 
