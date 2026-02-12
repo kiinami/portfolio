@@ -18,7 +18,7 @@ params:
   neso:
     show_toc: false
     cover:
-      image: "header.png"
+      image: "img/shoto-0.png"
       alt_text: "<cover alt text>"
       hidden_in_single : false
 ---
@@ -42,8 +42,10 @@ I also worked as the writer of the game, designing the storyline (what little th
 
 # Gallery
 
-![Shoto 1](header.png)
-![Shoto 2](shoto-1.png)
-![Shoto 3](shoto-2.png)
-![Shoto 4](shoto-3.png)
-![Shoto 5](shoto-4.png)
+{{< gallery hover-effect="none" caption-effect="appear" >}} {{< load-photoswipe >}}
+{{< picture src="img/shoto-0.png" caption="Title card" >}}
+{{< picture src="img/shoto-1.png" caption="In the island" >}}
+{{< picture src="img/shoto-2.png" caption="The rat lady" >}}
+{{< picture src="img/shoto-3.png" caption="Fishing" >}}
+{{< picture src="img/shoto-4.png" caption="Kinda lost, but surfing it" >}}
+{{< /gallery >}}

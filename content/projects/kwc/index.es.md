@@ -16,7 +16,7 @@ params:
   neso:
     show_toc: false
     cover:
-      image: "header.png"
+      image: "img/1-home.png"
       alt_text: "Página principal de KWC"
       hidden_in_single : false
 ---
@@ -51,8 +51,11 @@ También añadí un paso de deduplicación opcional y configurable para reducir 
 
 # Galería
 
-![La página de inicio](header.png)
-![La bandeja de entrada para clasificar fotogramas recién extraídos](kwc-inbox.png)
-![El formulario de extracción](kwc-extraction.png)
-![La interfaz de selección en escritorio](kwc-choose.png)
-![La interfaz de deslizar para seleccionar en móvil](kwc-choose-mobile.png)
+
+{{< gallery hover-effect="none" caption-effect="appear" >}} {{< load-photoswipe >}}
+{{< picture src="img/1-home.png" caption="La página de inicio" >}}
+{{< picture src="img/2-extraction.png" caption="El formulario de extracción" >}}
+{{< picture src="img/3-inbox.png" caption="La bandeja de entrada para clasificar fotogramas recién extraídos" >}}
+{{< picture src="img/4-choose.png" caption="La interfaz de selección en escritorio" >}}
+{{< picture src="img/5-choose-mobile.png" caption="La interfaz de deslizar para seleccionar en móvil" >}}
+{{< /gallery >}}

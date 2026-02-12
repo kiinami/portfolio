@@ -3,7 +3,7 @@
 
 baseURL = "https://jpgl.es/"
 title = "Juan Pedro Gálvez López"
-theme = "neso"
+theme = ["neso", "hugo-photoswipe5-gallery"]
 
 timeZone = "Europe/Madrid"
 languageCode = "en-us"
