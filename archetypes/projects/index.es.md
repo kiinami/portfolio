@@ -32,7 +32,3 @@ params:
 # Lo que aprendí
 
 
-
-# Enlaces
-
-

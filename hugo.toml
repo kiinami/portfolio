@@ -248,9 +248,16 @@ weight     = 55
   category = "tools"
 
 [[params.technologies]]
+  id = "github"
+  name = "tech_github"
+  icon = "devicon-github-plain"
+  url = "https://github.com/"
+  category = "tools"
+
+[[params.technologies]]
   id = "github_actions"
   name = "tech_github_actions"
-  icon = "devicon-github-original"
+  icon = "devicon-githubactions-plain"
   url = "https://github.com/features/actions"
   category = "tools"
 
@@ -303,6 +310,22 @@ weight     = 55
   icon = "devicon-inkscape-plain"
   url = "https://inkscape.org/"
   category = "design"
+
+[[params.technologies]]
+  id = "copilot"
+  name = "tech_copilot"
+  icon_dark = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/github-copilot-dark.svg"
+  icon_light = "https://raw.githubusercontent.com/homarr-labs/dashboard-icons/refs/heads/main/svg/github-copilot.svg"
+  url = "https://github.com/features/copilot"
+  category = "tools"
+
+[[params.technologies]]
+  id = "ffmpeg"
+  name = "tech_ffmpeg"
+  icon_dark = "images/ffmpeg-dark.svg"
+  icon_light = "images/ffmpeg-light.svg"
+  url = "https://ffmpeg.org/"
+  category = "tools"
 
 
 # Theme settings (general)

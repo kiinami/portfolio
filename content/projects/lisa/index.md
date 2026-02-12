@@ -6,7 +6,7 @@ slug: "lisa"
 description: "Simple OpenGL render engine in C++"
 summary: "Simple OpenGL render engine in C++"
 keywords: ["OpenGL", "C++", "Render Engine", "Deferred Rendering", "Forward Rendering", "Post-processing", "ECS", "3D Graphics"]
-techs: ["cpp", "opengl", "glsl", "cmake", "git"]
+techs: ["cpp", "opengl", "glsl", "cmake", "git", "github"]
 state: "paused"
 links:
   - name: "GitHub"

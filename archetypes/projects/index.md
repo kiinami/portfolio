@@ -7,7 +7,7 @@ description: "Enter the post description (a short SEO-friendly blurb)"
 summary: "Enter a brief summary of the post (used in list previews)"
 keywords: [""]
 techs: ["tech1", "tech2", "tech3"]
-state: "finished"
+state: "finished" # in progress/finished/dropped/paused
 links:
   - name: "GitHub"
     url: "https://github.com/USERNAME/REPO"
@@ -30,9 +30,5 @@ params:
 
 
 # What I Learnt
-
-
-
-# Links
 
 
