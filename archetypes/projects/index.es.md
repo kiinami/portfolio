@@ -5,8 +5,12 @@ slug: "{{ .File.ContentBaseName | urlize }}"
 
 description: "Enter the post description (a short SEO-friendly blurb)"
 summary: "Enter a brief summary of the post (used in list previews)"
-keywords: ["SEO keyword 1", "SEO keyword 2", "SEO keyword 3"]
-tags: ["tag a", "tag b", "tag c"]
+keywords: [""]
+techs: ["tech1", "tech2", "tech3"]
+state: "finished"
+links:
+  - name: "GitHub"
+    url: "https://github.com/USERNAME/REPO"
 
 params:
   neso:
@@ -14,7 +18,7 @@ params:
     cover:
       image: "header.png"
       alt_text: "<cover alt text>"
-      hidden_in_single : true
+      hidden_in_single : false
 ---
 
 # Descripción
