@@ -15,6 +15,8 @@ summary: "One-line summary of your role and main responsibilities"
 keywords: ["keyword1", "keyword2", "keyword3"]
 techs: ["python", "django", "postgresql"]  # Use tech IDs from hugo.toml
 
+projects: []  # Add project slugs here to display them as "Related Projects"
+
 links:
   - name: "Company Website"
     url: "https://example.com"

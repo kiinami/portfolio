@@ -1,16 +1,17 @@
 ---
-title: "Ingeniero de Software Senior"
-date: 2023-01-15T00:00:00Z
-slug: "senior-engineer-test"
+title: "Becario de desarrollo e investigación"
+date: 2022-01-01T00:00:00Z
+endDate: 2024-09-10T00:00:00Z
+slug: "es3"
 
-organization: "Empresa de Prueba"
-location: "Remoto"
+organization: "ES3"
+location: "Sevilla, España & remoto"
 type: "work"
 
-description: "Liderazgo del desarrollo backend para servicios de plataforma central"
-summary: "Lideré el desarrollo de arquitectura de microservicios sirviendo a más de 1M de usuarios"
-keywords: ["python", "kubernetes", "microservicios"]
-techs: ["python", "django", "postgresql", "docker"]
+description: "Desarrollo de proyectos fintech centrados en IA generativa e investigación en RPA"
+summary: "Desarrollo de proyectos fintech centrados en IA generativa e investigación en RPA"
+keywords: ["fintech", "IA generativa", "RPA", "Automatización Robótica de Procesos", "investigación académica", "Servinform", "despliegue en contenedores", "Universidad de Sevilla", "aplicaciones en producción", "inteligencia artificial", "becario de investigación"]
+techs: ["python", "django", "ollama", "linux", "docker", "docker_compose", "jupyter", "postgresql", "trello", "git", "github", "github_actions"]
 
 links:
   - name: "Empresa"
@@ -21,22 +22,12 @@ params:
     show_toc: false
 ---
 
-# Descripción del Rol
+# Descripción del rol
 
-Lideré el equipo de desarrollo backend responsable de los servicios de plataforma central procesando más de 10M de solicitudes por día.
+Investigador y desarrollador a tiempo parcial en el grupo de investigación ES3 de la Universidad de Sevilla, dentro del departamento de RPA (Automatización Robótica de Procesos). Mi trabajo abarcaba desarrollo, QA, documentación e investigación académica, según las necesidades de cada proyecto.
 
-## Logros Clave
+## Logros clave
 
-- Arquitectura e implementación de migración a microservicios reduciendo tiempos de respuesta en 40%
-- Mentoría de un equipo de 5 ingenieros junior
-- Establecimiento de pipelines CI/CD con 99.9% de disponibilidad
-
-## Tecnologías Utilizadas
-
-Trabajé principalmente con Python/Django para servicios backend, PostgreSQL para almacenamiento de datos, y Docker para contenerización.
-
-## Lo Que Aprendí
-
-- Patrones avanzados de diseño de sistemas para aplicaciones de alta escala
-- Habilidades de liderazgo de equipos y mentoría
-- Mejores prácticas de DevOps e infraestructura como código
+- Colaboré con [*Servinform, S.A.*](https://www.servinform.es/) en 3 proyectos enfocados en fintech e IA generativa: [CODICE](https://www.servinform.es/wp-content/uploads/2024/10/Servinform-CODICE-Publicidad-web-corporativa.pdf), [LINGER](https://www.servinform.es/wp-content/uploads/2024/10/Servinform-LINGER.pdf) y [MEGARA](https://www.servinform.es/wp-content/uploads/2024/10/Servinform-MEGARA-Publicidad-web-corporativa.pdf).
+- Investigué en profundidad en el campo de la inteligencia artificial y la IA generativa, con especial foco en RPA. Colaboré en el artículo _[“What’s Behind the Screen? Unveiling UI Hierarchies in Process-Related UI Logs”](https://doi.org/10.1007/978-3-031-70396-6_15)_.
+- Desplegué y mantuve aplicaciones en producción para tesis y proyectos de investigación, utilizando entornos basados en contenedores en servidores Linux.

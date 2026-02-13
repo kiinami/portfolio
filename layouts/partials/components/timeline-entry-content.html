@@ -60,14 +60,3 @@
 </div>
 {{- end }}
 
-{{- /* Links */}}
-{{- if $ctx.Params.links }}
-<div class="flex flex-wrap gap-2 {{ if eq $align "right" }}justify-end{{ end }}">
-    {{- range $ctx.Params.links }}
-    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer"
-       class="text-xs px-2 py-1 rounded border border-neso-deco2 hover:border-neso-splash hover:text-neso-splash transition no-underline">
-        {{ .name }}
-    </a>
-    {{- end }}
-</div>
-{{- end }}

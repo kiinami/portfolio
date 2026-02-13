@@ -48,6 +48,11 @@
             </div>
         {{- end }}
 
+        {{- /* Related Projects — Show if specified in frontmatter */}}
+        {{- if .Params.projects }}
+            {{- partial "content/related-projects.html" . }}
+        {{- end }}
+
         {{- /* Footer visibility — Site default true (unless configured); FM can only disable */}}
         {{- $showFooter := site.Params.neso.page.show_content_footer | default true }}
         {{- with .Params.neso.disable_content_footer }}

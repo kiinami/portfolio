@@ -15,6 +15,8 @@ summary: "Resumen de una línea de tu título y especialización"
 keywords: ["palabra1", "palabra2", "palabra3"]
 techs: ["python", "java", "cpp"]  # Usar IDs de tecnología de hugo.toml
 
+projects: []  # Agrega los slugs de proyectos aquí para mostrarlos como "Proyectos Relacionados"
+
 links:
   - name: "Universidad"
     url: "https://universidad.edu"

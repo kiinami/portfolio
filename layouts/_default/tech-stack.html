@@ -16,11 +16,11 @@
         {{- end }}
 
         <div class="flex flex-col gap-10">
-            {{- range site.Params.tech_categories }}
+            {{- range site.Data.tech.categories }}
                 {{- $catID := .id }}
-                {{- $catName := i18n .name | default .name }}
+                {{- $catName := index .name site.Language.Lang | default (index .name "en") }}
                 
-                {{- $techs := where site.Params.technologies "category" $catID }}
+                {{- $techs := where site.Data.tech.technologies "category" $catID }}
                 
                 {{- $displayTechs := slice }}
                 {{- range $techs }}
@@ -37,10 +37,9 @@
                     <h2 class="text-2xl font-bold mb-6 pb-2 border-b border-neso-deco2">{{ $catName }}</h2>
                     <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-8">
                         {{- range $displayTechs }}
-                            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" 
-                               class="group relative flex flex-col items-center justify-center p-4 transition-all no-underline">
+                            <div class="group relative flex flex-col items-center justify-center p-4 transition-all">
                                 {{- partial "components/tech-icon.html" (dict "context" . "class" "w-16 h-16" "textClass" "text-5xl" "tooltipPos" "bottom") }}
-                            </a>
+                            </div>
                         {{- end }}
                     </div>
                 </section>

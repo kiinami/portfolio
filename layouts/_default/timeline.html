@@ -1,6 +1,6 @@
 {{- define "main" }}
-<section class="layout last:expansive">
-    <article>
+<section class="layout-fluid last:expansive">
+    <article class="max-w-7xl mx-auto">
         {{- partial "content/header.html" . }}
 
         {{- if .Content }}
@@ -50,10 +50,90 @@
             {{- $entries := .RegularPages }}
             {{- $entries = $entries.ByDate.Reverse }}
 
-            <div class="flex flex-col gap-8 md:gap-12">
+            {{- /* Mobile: Simple sequential layout */}}
+            <div class="md:hidden">
                 {{- range $index, $entry := $entries }}
                     {{- partial "components/timeline-entry.html" (dict "ctx" $entry "index" $index) }}
                 {{- end }}
+            </div>
+
+            {{- /* Desktop: Two-column independent layout */}}
+            <div class="hidden md:block">
+                <div class="flex gap-8 items-start">
+                    {{- /* Left column */}}
+                    <div class="w-1/2 flex flex-col gap-12 pr-8">
+                        {{- range $index, $entry := $entries }}
+                            {{- if eq (mod $index 2) 0 }}
+                                <div class="relative" style="margin-top: {{ mul $index 3 }}rem;">
+                                    <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash text-right timeline-item" data-type="{{ $entry.Params.type | default "work" }}">
+                                        {{- /* Calculate date display */}}
+                                        {{- $dateRange := "" }}
+                                        {{- with $entry.Params.customDate }}
+                                            {{- $dateRange = . }}
+                                        {{- else }}
+                                            {{- $startDate := $entry.Date.Format "Jan 2006" }}
+                                            {{- $endDate := "" }}
+                                            {{- with $entry.Params.endDate }}
+                                                {{- $endDate = (time .).Format "Jan 2006" }}
+                                            {{- else }}
+                                                {{- $endDate = i18n "present" | default "Present" }}
+                                            {{- end }}
+                                            {{- $dateRange = printf "%s - %s" $startDate $endDate }}
+                                        {{- end }}
+                                        {{- partial "components/timeline-entry-content.html" (dict "ctx" $entry "dateRange" $dateRange "align" "right") }}
+                                    </div>
+                                    {{- /* Dot positioned relative to this card */}}
+                                    {{- $dotColor := "bg-neso-splash" }}
+                                    {{- if eq ($entry.Params.type | default "work") "education" }}
+                                        {{- $dotColor = "bg-blue-500" }}
+                                    {{- else if eq ($entry.Params.type | default "work") "certification" }}
+                                        {{- $dotColor = "bg-purple-500" }}
+                                    {{- else }}
+                                        {{- $dotColor = "bg-green-500" }}
+                                    {{- end }}
+                                    <div class="absolute -right-12 top-0 translate-x-1/2 w-5 h-5 rounded-full {{ $dotColor }} border-4 border-neso-bg1 z-10"></div>
+                                </div>
+                            {{- end }}
+                        {{- end }}
+                    </div>
+
+                    {{- /* Right column */}}
+                    <div class="w-1/2 flex flex-col gap-12 pl-8 mt-24">
+                        {{- range $index, $entry := $entries }}
+                            {{- if ne (mod $index 2) 0 }}
+                                <div class="relative" style="margin-top: {{ mul (sub $index 1) 3 }}rem;">
+                                    <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash text-left timeline-item" data-type="{{ $entry.Params.type | default "work" }}">
+                                        {{- /* Calculate date display */}}
+                                        {{- $dateRange := "" }}
+                                        {{- with $entry.Params.customDate }}
+                                            {{- $dateRange = . }}
+                                        {{- else }}
+                                            {{- $startDate := $entry.Date.Format "Jan 2006" }}
+                                            {{- $endDate := "" }}
+                                            {{- with $entry.Params.endDate }}
+                                                {{- $endDate = (time .).Format "Jan 2006" }}
+                                            {{- else }}
+                                                {{- $endDate = i18n "present" | default "Present" }}
+                                            {{- end }}
+                                            {{- $dateRange = printf "%s - %s" $startDate $endDate }}
+                                        {{- end }}
+                                        {{- partial "components/timeline-entry-content.html" (dict "ctx" $entry "dateRange" $dateRange "align" "left") }}
+                                    </div>
+                                    {{- /* Dot positioned relative to this card */}}
+                                    {{- $dotColor := "bg-neso-splash" }}
+                                    {{- if eq ($entry.Params.type | default "work") "education" }}
+                                        {{- $dotColor = "bg-blue-500" }}
+                                    {{- else if eq ($entry.Params.type | default "work") "certification" }}
+                                        {{- $dotColor = "bg-purple-500" }}
+                                    {{- else }}
+                                        {{- $dotColor = "bg-green-500" }}
+                                    {{- end }}
+                                    <div class="absolute -left-12 top-0 -translate-x-1/2 w-5 h-5 rounded-full {{ $dotColor }} border-4 border-neso-bg1 z-10"></div>
+                                </div>
+                            {{- end }}
+                        {{- end }}
+                    </div>
+                </div>
             </div>
         </div>
     </article>

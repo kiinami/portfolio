@@ -15,6 +15,8 @@ summary: "Resumen de una línea de tu puesto y principales responsabilidades"
 keywords: ["palabra1", "palabra2", "palabra3"]
 techs: ["python", "django", "postgresql"]  # Usar IDs de tecnología de hugo.toml
 
+projects: ["kwc"]
+
 links:
   - name: "Sitio Web de la Empresa"
     url: "https://example.com"
@@ -24,9 +26,6 @@ links:
 params:
   neso:
     show_toc: false
-    cover:
-      image: "img/logo.png"  # Logo de la empresa/organización
-      alt_text: "Logo de la empresa"
 ---
 
 # Descripción del Puesto

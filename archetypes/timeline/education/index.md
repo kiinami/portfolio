@@ -15,6 +15,8 @@ summary: "One-line summary of your degree and specialization"
 keywords: ["keyword1", "keyword2", "keyword3"]
 techs: ["python", "java", "cpp"]  # Use tech IDs from hugo.toml
 
+projects: []  # Add project slugs here to display them as "Related Projects"
+
 links:
   - name: "University"
     url: "https://university.edu"

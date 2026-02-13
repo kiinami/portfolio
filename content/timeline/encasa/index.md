@@ -1,32 +1,27 @@
 ---
-title: "Encasa"
-date: 2023-09-01T15:03:20+01:00
-# endDate: 2026-02-12T15:03:20+01:00 # Uncomment and set end date, or remove for current position
+title: "Technical Office Assistant"
+date: 2020-07-01T15:03:20+01:00
+endDate: 2023-10-01T15:03:20+01:00
 slug: "encasa"
 
-customDate: "Summers 2020-2023" # Uncomment to use custom date text instead of automatic date range
+customDate: "Summers 2020-2023"
 
-organization: "Company Name"
-location: "City, Country"
+organization: "Encasa"
+location: "Seville, Spain"
 type: "work"
 
-description: "Brief role description for SEO"
-summary: "One-line summary of your role and main responsibilities"
+description: "Design, prototyping and production implementation of corrugated cardboard packaging, and development of internal company tools"
+summary: "Design, prototyping and production implementation of corrugated cardboard packaging, and development of internal company tools"
 keywords: ["keyword1", "keyword2", "keyword3"]
-techs: ["python", "django", "postgresql"]  # Use tech IDs from hugo.toml
-
+techs: ["python", "postgresql", "telegram", "illustrator", "git", "github"]
+projects: ["kwc"]
 links:
-  - name: "Company Website"
-    url: "https://example.com"
-  # - name: "Project"
-  #   url: "https://project-url.com"
+  - name: "Encasa"
+    url: "https://encasa.es"
 
 params:
   neso:
     show_toc: false
-    cover:
-      image: "img/logo.png"  # Company/organization logo
-      alt_text: "Company logo"
 ---
 
 # Role Overview

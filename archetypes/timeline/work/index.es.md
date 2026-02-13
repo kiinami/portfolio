@@ -15,6 +15,8 @@ summary: "Resumen de una línea de tu puesto y principales responsabilidades"
 keywords: ["palabra1", "palabra2", "palabra3"]
 techs: ["python", "django", "postgresql"]  # Usar IDs de tecnología de hugo.toml
 
+projects: []  # Agrega los slugs de proyectos aquí para mostrarlos como "Proyectos Relacionados"
+
 links:
   - name: "Sitio Web de la Empresa"
     url: "https://example.com"

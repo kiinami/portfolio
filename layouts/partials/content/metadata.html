@@ -1,7 +1,26 @@
 {{- /* Collect post meta items in a scratch for flexible rendering */}}
 {{- $metaScratch := newScratch }}
 
-{{- /* 1) Date - DISABLED */}}
+{{- /* 1) Date Range (for timeline entries) */}}
+{{- if .Params.type }}
+    {{- /* Timeline entry - show date range */}}
+    {{- $dateRange := "" }}
+    {{- with .Params.customDate }}
+        {{- /* Use custom date if provided */}}
+        {{- $dateRange = . }}
+    {{- else }}
+        {{- /* Calculate date range automatically */}}
+        {{- $startDate := .Date.Format "Jan 2006" }}
+        {{- $endDate := "" }}
+        {{- with .Params.endDate }}
+            {{- $endDate = (time .).Format "Jan 2006" }}
+        {{- else }}
+            {{- $endDate = i18n "present" | default "Present" }}
+        {{- end }}
+        {{- $dateRange = printf "%s - %s" $startDate $endDate }}
+    {{- end }}
+    {{- $metaScratch.Add "meta" (slice (dict "kind" "date" "text" $dateRange "title" "Date range")) }}
+{{- end }}
 
 {{- /* 2) Word count (site on, page not disabled) */}}
 {{- $siteShowsWordCount := site.Params.neso.page.show_word_count }}
