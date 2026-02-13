@@ -11,7 +11,9 @@ type: "work"
 description: "Desarrollo de proyectos fintech centrados en IA generativa e investigación en RPA"
 summary: "Desarrollo de proyectos fintech centrados en IA generativa e investigación en RPA"
 keywords: ["fintech", "IA generativa", "RPA", "Automatización Robótica de Procesos", "investigación académica", "Servinform", "despliegue en contenedores", "Universidad de Sevilla", "aplicaciones en producción", "inteligencia artificial", "becario de investigación"]
+
 techs: ["python", "django", "ollama", "linux", "docker", "docker_compose", "jupyter", "postgresql", "trello", "git", "github", "github_actions"]
+projects: []
 
 links:
   - name: "Empresa"
@@ -22,7 +24,7 @@ params:
     show_toc: false
 ---
 
-# Descripción del rol
+## Descripción del rol
 
 Investigador y desarrollador a tiempo parcial en el grupo de investigación ES3 de la Universidad de Sevilla, dentro del departamento de RPA (Automatización Robótica de Procesos). Mi trabajo abarcaba desarrollo, QA, documentación e investigación académica, según las necesidades de cada proyecto.
 

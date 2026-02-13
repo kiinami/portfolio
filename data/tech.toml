@@ -30,9 +30,8 @@
     en = "Design"
     es = "Diseño"
 
-
-# Use unique IDs for 'id' to reference in content pages
 # --------------------------------
+
 [[technologies]]
   id = "python"
   icon = "simple-icons:python"
@@ -277,6 +276,15 @@
     es = "Linux"
 
 [[technologies]]
+  id = "raspberrypi"
+  icon = "simple-icons:raspberrypi"
+  url = "https://www.raspberrypi.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Raspberry Pi"
+    es = "Raspberry Pi"
+
+[[technologies]]
   id = "linear"
   icon = "simple-icons:linear"
   url = "https://linear.app/"
@@ -365,3 +373,12 @@
   [technologies.name]
     en = "Jupyter notebooks"
     es = "Jupyter"
+
+[[technologies]]
+  id = "artios"
+  icon = "ph:asterisk-fill"
+  url = "https://www.esko.com/en/products/artioscad"
+  category = "design"
+  [technologies.name]
+    en = "Esko ArtiosCAD"
+    es = "Esko ArtiosCAD"
