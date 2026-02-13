@@ -124,7 +124,7 @@
 
 [[technologies]]
   id = "html"
-  icon = "simple-icons:html5"
+  icon = "material-symbols:html"
   url = "https://developer.mozilla.org/en-US/docs/Web/HTML"
   category = "languages"
   [technologies.name]
@@ -133,7 +133,7 @@
 
 [[technologies]]
   id = "css"
-  icon = "simple-icons:css3"
+  icon = "material-symbols:css"
   url = "https://developer.mozilla.org/en-US/docs/Web/CSS"
   category = "languages"
   [technologies.name]
@@ -220,6 +220,15 @@
   [technologies.name]
     en = "MySQL"
     es = "MySQL"
+
+[[technologies]]
+  id = "mariadb"
+  icon = "simple-icons:mariadb"
+  url = "https://mariadb.org/"
+  category = "db"
+  [technologies.name]
+    en = "MariaDB"
+    es = "MariaDB"
 
 [[technologies]]
   id = "mongodb"
@@ -382,3 +391,84 @@
   [technologies.name]
     en = "Esko ArtiosCAD"
     es = "Esko ArtiosCAD"
+
+[[technologies]]
+  id = "wireshark"
+  icon = "simple-icons:wireshark"
+  url = "https://www.wireshark.org/"
+  category = "tools"
+  [technologies.name]
+    en = "Wireshark"
+    es = "Wireshark"
+
+[[technologies]]
+  id = "ansible"
+  icon = "simple-icons:ansible"
+  url = "https://www.redhat.com/en/ansible-collaborative?intcmp=7015Y000003t7aWQAQ"
+  category = "tools"
+  [technologies.name]
+    en = "Ansible"
+    es = "Ansible"
+
+[[technologies]]
+  id = "vagrant"
+  icon = "simple-icons:vagrant"
+  url = "https://www.vagrantup.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Vagrant"
+    es = "Vagrant"
+
+[[technologies]]
+  id = "typst"
+  icon = "simple-icons:typst"
+  url = "https://typst.app/"
+  category = "language"
+  [technologies.name]
+    en = "Typst"
+    es = "Typst"
+
+[[technologies]]
+  id = "latex"
+  icon = "simple-icons:latex"
+  url = "https://www.latex-project.org/"
+  category = "language"
+  [technologies.name]
+    en = "LaTeX"
+    es = "LaTeX"
+
+[[technologies]]
+  id = "sagemath"
+  icon = "simple-icons:sagemath"
+  url = "https://www.sagemath.org/"
+  category = "frameworks"
+  [technologies.name]
+    en = "SageMath"
+    es = "SageMath"
+
+[[technologies]]
+  id = "spring"
+  icon = "simple-icons:spring"
+  url = "https://spring.io/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Spring / Spring Boot"
+    es = "Spring / Spring Boot"
+
+[[technologies]]
+  id = "octave"
+  icon = "simple-icons:octave"
+  url = "https://octave.org/"
+  category = "languages"
+  [technologies.name]
+    en = "GNU Octave"
+    es = "GNU Octave"
+
+[[technologies]]
+  id = "matlab"
+  icon = "mdi:language-matlab"
+  url = "https://www.mathworks.com/products/matlab.html"
+  category = "languages"
+  [technologies.name]
+    en = "MATLAB"
+    es = "MATLAB"

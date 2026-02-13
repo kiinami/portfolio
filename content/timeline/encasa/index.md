@@ -12,7 +12,7 @@ type: "work"
 
 description: "Design, prototyping and production implementation of corrugated cardboard packaging, and development of internal company tools"
 summary: "Design, prototyping and production implementation of corrugated cardboard packaging, and development of internal company tools"
-keywords: ["keyword1", "keyword2", "keyword3"]
+keywords: ["technical office assistant", "cardboard packaging design", "python automation", "telegram bot development", "ERP integration", "corrugated cardboard", "production workflow", "internal tools development"]
 
 techs: ["illustrator", "artios", "python", "postgresql", "telegram", "git", "github", "linux", "docker", "docker_compose", "inkscape", "raspberrypi"]
 projects: ["kamihi"]

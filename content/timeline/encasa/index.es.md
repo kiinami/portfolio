@@ -12,7 +12,7 @@ type: "work"
 
 description: "Diseño, prototipado y puesta en producción de embalajes de cartón ondulado, y desarrollo de herramientas internas de la empresa"
 summary: "Diseño, prototipado y puesta en producción de embalajes de cartón ondulado, y desarrollo de herramientas internas de la empresa"
-keywords: ["keyword1", "keyword2", "keyword3"]
+keywords: ["asistente oficina técnica", "diseño embalajes cartón", "automatización python", "bot telegram", "integración ERP", "cartón ondulado", "flujo producción", "herramientas internas"]
 
 techs: ["illustrator", "artios", "python", "postgresql", "telegram", "git", "github", "linux", "docker", "docker_compose", "inkscape", "raspberrypi"]
 projects: ["kamihi"]
