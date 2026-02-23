@@ -36,7 +36,7 @@ entry_link_aria:
     other: "Leer “{{ .Title }}”"
 
 feature_entries:
-    other: "Proyectos destacados"
+    other: "Proyectos más recientes"
 
 heading_link_label:
     other: "Enlace a esta sección"

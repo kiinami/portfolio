@@ -13,7 +13,7 @@ summary: "Computer Science degree with focus on software engineering"
 keywords: ["computer science", "software engineering", "algorithms"]
 
 techs: ["python", "java", "html", "css", "javascript", "git", "github", "github_actions", "mariadb", "sqlite", "postgresql", "docker", "docker_compose", "react", "bash", "django", "flask", "linux", "blender", "jupyter", "typst", "vagrant", "latex", "sagemath", "spring", "octave"]
-projects: ["kamihi"]
+projects: ["kamihi", flight]
 
 links:
   - name: "University of Seville"
