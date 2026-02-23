@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Club App"
 date: 2024-01-30T16:09:26+01:00
 slug: "club"

@@ -36,7 +36,7 @@ I was part of the English Group, a selective track where the majority of courses
 
 The curriculum balanced theoretical computer science with hands-on software engineering practices, covering everything from low-level systems programming to high-level software architecture, with emphasis on team-based projects that simulate real-world development scenarios.
 
-During my studies I also had the opportunity to study abroad for a year in Politecnico di Milano, and to collaborate as a grant student in the ES3 research group of the university during the 3rd and 4th years.
+During my studies I also had the opportunity to study abroad for a year in Politecnico di Milano (see [here](timeline/polimi)), and to collaborate as a grant student in the ES3 research group of the university during the 3rd and 4th years (see [here](timeline/es3)).
 
 I finished my studies with [Kamihi](projects/kamihi), a thesis project based on [my work at Encasa](timeline/encasa), for which I received the maximum grade, and that is still in active development.
 

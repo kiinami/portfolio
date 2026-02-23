@@ -23,13 +23,13 @@ params:
     show_toc: false
 ---
 
-# Descripción del Máster
+# Descripción del máster
 
 Actualmente estoy cursando un Máster en Informática Gráfica, Juegos y Realidad Virtual en la Universidad Rey Juan Carlos.
 
 El máster, que consta de 60 créditos ECTS en un solo año, abarca una cantidad increíble de contenido sobre esta disciplina, desde los fundamentos teóricos hasta multitud de proyectos prácticos.
 
-## Asignaturas Clave
+## Asignaturas clave
 
 - Fundamentos Matemáticos y Físicos para la Informática Gráfica (Semestre 1): cubrió mallas triangulares en profundidad, varios métodos numéricos y toda una serie de conceptos de física.
 - Gráficos 3D (Semestre 1): desarrollé un motor de renderizado en OpenGL paso a paso (ver [aquí](projects/lisa)).

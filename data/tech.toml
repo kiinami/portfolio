@@ -477,7 +477,7 @@
   id = "vulkan"
   icon = "simple-icons:vulkan"
   url = "https://www.vulkan.org/"
-  category = "languages"
+  category = "frameworks"
   [technologies.name]
     en = "Vulkan"
     es = "Vulkan"
@@ -486,7 +486,16 @@
   id = "quest"
   icon = "simple-icons:meta"
   url = "https://www.meta.com/es/en/quest/"
-  category = "languages"
+  category = "frameworks"
   [technologies.name]
     en = "Meta Quest"
     es = "Meta Quest"
+
+[[technologies]]
+  id = "aseprite"
+  icon = "simple-icons:aseprite"
+  url = "https://www.aseprite.org/"
+  category = "design"
+  [technologies.name]
+    en = "Aseprite"
+    es = "Aseprite"
