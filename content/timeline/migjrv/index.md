@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Master's Degree in Computer Graphics, Games & VR"
 date: 2025-09-12T16:15:59+01:00
 slug: "migjrv"

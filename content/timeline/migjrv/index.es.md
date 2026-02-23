@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Máster en Informática Gráfica, Juegos y Realidad Virtual"
 date: 2025-09-12T16:15:59+01:00
 slug: "migjrv"
