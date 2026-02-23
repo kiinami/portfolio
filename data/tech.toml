@@ -466,9 +466,27 @@
 
 [[technologies]]
   id = "matlab"
-  icon = "mdi:language-matlab"
+  icon = "devicon-plain:matlab"
   url = "https://www.mathworks.com/products/matlab.html"
   category = "languages"
   [technologies.name]
     en = "MATLAB"
     es = "MATLAB"
+
+[[technologies]]
+  id = "vulkan"
+  icon = "simple-icons:vulkan"
+  url = "https://www.vulkan.org/"
+  category = "languages"
+  [technologies.name]
+    en = "Vulkan"
+    es = "Vulkan"
+
+[[technologies]]
+  id = "quest"
+  icon = "simple-icons:meta"
+  url = "https://www.meta.com/es/en/quest/"
+  category = "languages"
+  [technologies.name]
+    en = "Meta Quest"
+    es = "Meta Quest"
