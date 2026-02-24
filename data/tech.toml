@@ -1,0 +1,501 @@
+# Tech Stack Categories
+# --------------------------------
+[[categories]]
+  id = "languages"
+  [categories.name]
+    en = "Programming Languages"
+    es = "Lenguajes de programación"
+
+[[categories]]
+  id = "frameworks"
+  [categories.name]
+    en = "Frameworks & Libraries"
+    es = "Frameworks y librerías"
+
+[[categories]]
+  id = "db"
+  [categories.name]
+    en = "Databases"
+    es = "Bases de datos"
+
+[[categories]]
+  id = "tools"
+  [categories.name]
+    en = "Tools"
+    es = "Herramientas"
+
+[[categories]]
+  id = "design"
+  [categories.name]
+    en = "Design"
+    es = "Diseño"
+
+# --------------------------------
+
+[[technologies]]
+  id = "python"
+  icon = "simple-icons:python"
+  url = "https://www.python.org/"
+  category = "languages"
+  [technologies.name]
+    en = "Python"
+    es = "Python"
+
+[[technologies]]
+  id = "cpp"
+  icon = "simple-icons:cplusplus"
+  url = "https://isocpp.org/"
+  category = "languages"
+  [technologies.name]
+    en = "C++"
+    es = "C++"
+
+[[technologies]]
+  id = "telegram"
+  icon = "simple-icons:telegram"
+  url = "https://core.telegram.org/bots/api"
+  category = "tools"
+  [technologies.name]
+    en = "Telegram Bot API"
+    es = "API de Bots de Telegram"
+
+[[technologies]]
+  id = "postgresql"
+  icon = "simple-icons:postgresql"
+  url = "https://www.postgresql.org/"
+  category = "db"
+  [technologies.name]
+    en = "PostgreSQL"
+    es = "PostgreSQL"
+
+[[technologies]]
+  id = "sqlite"
+  icon = "simple-icons:sqlite"
+  url = "https://www.sqlite.org/"
+  category = "db"
+  [technologies.name]
+    en = "SQLite"
+    es = "SQLite"
+
+[[technologies]]
+  id = "opengl"
+  icon = "simple-icons:opengl"
+  url = "https://www.opengl.org/"
+  category = "frameworks"
+  [technologies.name]
+    en = "OpenGL"
+    es = "OpenGL"
+
+[[technologies]]
+  id = "docker"
+  icon = "simple-icons:docker"
+  url = "https://www.docker.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Docker"
+    es = "Docker"
+
+[[technologies]]
+  id = "csharp"
+  icon = "devicon-plain:csharp"
+  url = "https://docs.microsoft.com/en-us/dotnet/csharp/"
+  category = "languages"
+  [technologies.name]
+    en = "C#"
+    es = "C#"
+
+[[technologies]]
+  id = "java"
+  icon = "mdi:language-java"
+  url = "https://www.java.com/"
+  category = "languages"
+  [technologies.name]
+    en = "Java"
+    es = "Java"
+
+[[technologies]]
+  id = "dart"
+  icon = "simple-icons:dart"
+  url = "https://dart.dev/"
+  category = "languages"
+  [technologies.name]
+    en = "Dart"
+    es = "Dart"
+
+[[technologies]]
+  id = "html"
+  icon = "material-symbols:html"
+  url = "https://developer.mozilla.org/en-US/docs/Web/HTML"
+  category = "languages"
+  [technologies.name]
+    en = "HTML"
+    es = "HTML"
+
+[[technologies]]
+  id = "css"
+  icon = "material-symbols:css"
+  url = "https://developer.mozilla.org/en-US/docs/Web/CSS"
+  category = "languages"
+  [technologies.name]
+    en = "CSS"
+    es = "CSS"
+
+[[technologies]]
+  id = "bash"
+  icon = "simple-icons:gnubash"
+  url = "https://www.gnu.org/software/bash/"
+  category = "languages"
+  [technologies.name]
+    en = "Bash"
+    es = "Bash"
+
+[[technologies]]
+  id = "glsl"
+  icon = "simple-icons:opengl"
+  url = "https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)"
+  category = "languages"
+  [technologies.name]
+    en = "GLSL"
+    es = "GLSL"
+
+[[technologies]]
+  id = "unity"
+  icon = "simple-icons:unity"
+  url = "https://unity.com/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Unity"
+    es = "Unity"
+
+[[technologies]]
+  id = "django"
+  icon = "simple-icons:django"
+  url = "https://www.djangoproject.com/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Django"
+    es = "Django"
+
+[[technologies]]
+  id = "flask"
+  icon = "simple-icons:flask"
+  url = "https://flask.palletsprojects.com/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Flask"
+    es = "Flask"
+
+[[technologies]]
+  id = "fastapi"
+  icon = "simple-icons:fastapi"
+  url = "https://fastapi.tiangolo.com/"
+  category = "frameworks"
+  [technologies.name]
+    en = "FastAPI"
+    es = "FastAPI"
+
+[[technologies]]
+  id = "reactnative"
+  icon = "simple-icons:react"
+  url = "https://reactnative.dev/"
+  category = "frameworks"
+  [technologies.name]
+    en = "React Native"
+    es = "React Native"
+
+[[technologies]]
+  id = "flutter"
+  icon = "simple-icons:flutter"
+  url = "https://flutter.dev/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Flutter"
+    es = "Flutter"
+
+[[technologies]]
+  id = "mysql"
+  icon = "simple-icons:mysql"
+  url = "https://www.mysql.com/"
+  category = "db"
+  [technologies.name]
+    en = "MySQL"
+    es = "MySQL"
+
+[[technologies]]
+  id = "mariadb"
+  icon = "simple-icons:mariadb"
+  url = "https://mariadb.org/"
+  category = "db"
+  [technologies.name]
+    en = "MariaDB"
+    es = "MariaDB"
+
+[[technologies]]
+  id = "mongodb"
+  icon = "simple-icons:mongodb"
+  url = "https://www.mongodb.com/"
+  category = "db"
+  [technologies.name]
+    en = "MongoDB"
+    es = "MongoDB"
+
+[[technologies]]
+  id = "git"
+  icon = "simple-icons:git"
+  url = "https://git-scm.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Git"
+    es = "Git"
+
+[[technologies]]
+  id = "docker_compose"
+  icon = "simple-icons:docker"
+  url = "https://docs.docker.com/compose/"
+  category = "tools"
+  [technologies.name]
+    en = "Docker Compose"
+    es = "Docker Compose"
+
+[[technologies]]
+  id = "github"
+  icon = "simple-icons:github"
+  url = "https://github.com/"
+  category = "tools"
+  [technologies.name]
+    en = "GitHub"
+    es = "GitHub"
+
+[[technologies]]
+  id = "github_actions"
+  icon = "simple-icons:githubactions"
+  url = "https://github.com/features/actions"
+  category = "tools"
+  [technologies.name]
+    en = "GitHub Actions"
+    es = "GitHub Actions"
+
+[[technologies]]
+  id = "linux"
+  icon = "simple-icons:linux"
+  url = "https://www.linux.org/"
+  category = "tools"
+  [technologies.name]
+    en = "Linux"
+    es = "Linux"
+
+[[technologies]]
+  id = "raspberrypi"
+  icon = "simple-icons:raspberrypi"
+  url = "https://www.raspberrypi.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Raspberry Pi"
+    es = "Raspberry Pi"
+
+[[technologies]]
+  id = "linear"
+  icon = "simple-icons:linear"
+  url = "https://linear.app/"
+  category = "tools"
+  [technologies.name]
+    en = "Linear"
+    es = "Linear"
+
+[[technologies]]
+  id = "trello"
+  icon = "simple-icons:trello"
+  url = "https://trello.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Trello"
+    es = "Trello"
+
+[[technologies]]
+  id = "cmake"
+  icon = "simple-icons:cmake"
+  url = "https://cmake.org/"
+  category = "tools"
+  [technologies.name]
+    en = "CMake"
+    es = "CMake"
+
+[[technologies]]
+  id = "blender"
+  icon = "simple-icons:blender"
+  url = "https://www.blender.org/"
+  category = "design"
+  [technologies.name]
+    en = "Blender"
+    es = "Blender"
+
+[[technologies]]
+  id = "illustrator"
+  icon = "devicon-plain:illustrator"
+  url = "https://www.adobe.com/products/illustrator.html"
+  category = "design"
+  [technologies.name]
+    en = "Adobe Illustrator"
+    es = "Adobe Illustrator"
+
+[[technologies]]
+  id = "inkscape"
+  icon = "simple-icons:inkscape"
+  url = "https://inkscape.org/"
+  category = "design"
+  [technologies.name]
+    en = "Inkscape"
+    es = "Inkscape"
+
+[[technologies]]
+  id = "copilot"
+  icon = "devicon-plain:githubcopilot"
+  url = "https://github.com/features/copilot"
+  category = "tools"
+  [technologies.name]
+    en = "GitHub Copilot"
+    es = "GitHub Copilot"
+
+[[technologies]]
+  id = "ffmpeg"
+  icon = "simple-icons:ffmpeg"
+  url = "https://ffmpeg.org/"
+  category = "tools"
+  [technologies.name]
+    en = "FFmpeg"
+    es = "FFmpeg"
+
+[[technologies]]
+  id = "ollama"
+  icon = "simple-icons:ollama"
+  url = "https://ollama.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Ollama"
+    es = "Ollama"
+
+[[technologies]]
+  id = "jupyter"
+  icon = "simple-icons:jupyter"
+  url = "https://ollama.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Jupyter notebooks"
+    es = "Jupyter"
+
+[[technologies]]
+  id = "artios"
+  icon = "ph:asterisk-fill"
+  url = "https://www.esko.com/en/products/artioscad"
+  category = "design"
+  [technologies.name]
+    en = "Esko ArtiosCAD"
+    es = "Esko ArtiosCAD"
+
+[[technologies]]
+  id = "wireshark"
+  icon = "simple-icons:wireshark"
+  url = "https://www.wireshark.org/"
+  category = "tools"
+  [technologies.name]
+    en = "Wireshark"
+    es = "Wireshark"
+
+[[technologies]]
+  id = "ansible"
+  icon = "simple-icons:ansible"
+  url = "https://www.redhat.com/en/ansible-collaborative?intcmp=7015Y000003t7aWQAQ"
+  category = "tools"
+  [technologies.name]
+    en = "Ansible"
+    es = "Ansible"
+
+[[technologies]]
+  id = "vagrant"
+  icon = "simple-icons:vagrant"
+  url = "https://www.vagrantup.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Vagrant"
+    es = "Vagrant"
+
+[[technologies]]
+  id = "typst"
+  icon = "simple-icons:typst"
+  url = "https://typst.app/"
+  category = "language"
+  [technologies.name]
+    en = "Typst"
+    es = "Typst"
+
+[[technologies]]
+  id = "latex"
+  icon = "simple-icons:latex"
+  url = "https://www.latex-project.org/"
+  category = "language"
+  [technologies.name]
+    en = "LaTeX"
+    es = "LaTeX"
+
+[[technologies]]
+  id = "sagemath"
+  icon = "simple-icons:sagemath"
+  url = "https://www.sagemath.org/"
+  category = "frameworks"
+  [technologies.name]
+    en = "SageMath"
+    es = "SageMath"
+
+[[technologies]]
+  id = "spring"
+  icon = "simple-icons:spring"
+  url = "https://spring.io/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Spring / Spring Boot"
+    es = "Spring / Spring Boot"
+
+[[technologies]]
+  id = "octave"
+  icon = "simple-icons:octave"
+  url = "https://octave.org/"
+  category = "languages"
+  [technologies.name]
+    en = "GNU Octave"
+    es = "GNU Octave"
+
+[[technologies]]
+  id = "matlab"
+  icon = "devicon-plain:matlab"
+  url = "https://www.mathworks.com/products/matlab.html"
+  category = "languages"
+  [technologies.name]
+    en = "MATLAB"
+    es = "MATLAB"
+
+[[technologies]]
+  id = "vulkan"
+  icon = "simple-icons:vulkan"
+  url = "https://www.vulkan.org/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Vulkan"
+    es = "Vulkan"
+
+[[technologies]]
+  id = "quest"
+  icon = "simple-icons:meta"
+  url = "https://www.meta.com/es/en/quest/"
+  category = "frameworks"
+  [technologies.name]
+    en = "Meta Quest"
+    es = "Meta Quest"
+
+[[technologies]]
+  id = "aseprite"
+  icon = "simple-icons:aseprite"
+  url = "https://www.aseprite.org/"
+  category = "design"
+  [technologies.name]
+    en = "Aseprite"
+    es = "Aseprite"

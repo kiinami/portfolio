@@ -1,0 +1,16 @@
+{{- if .IsTranslated }}
+    <span class="whitespace-pre">{{- i18n "translations" | default "Translations:&nbsp;" | safeHTML -}}</span>
+    <ul class="contents">
+        {{- $translations := .Translations }}
+        {{- range $i, $t := $translations }}
+            <li>
+                <a class="ui-link not-last:sep-e-comma" href="{{ $t.RelPermalink }}">
+                    {{- if eq $t.Lang "en" }}🇬🇧
+                    {{- else if eq $t.Lang "es" }}🇪🇸
+                    {{- else }}{{ $t.Lang | upper }}
+                    {{- end -}}
+                </a>
+            </li>
+        {{- end }}
+    </ul>
+{{- end -}}

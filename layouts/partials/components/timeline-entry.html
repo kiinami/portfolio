@@ -1,0 +1,68 @@
+{{- $ctx := .ctx }}
+{{- $index := .index }}
+{{- $isEven := eq (mod $index 2) 0 }}
+
+{{- /* Calculate date display */}}
+{{- $dateRange := "" }}
+{{- with $ctx.Params.customDate }}
+    {{- /* Use custom date if provided */}}
+    {{- $dateRange = . }}
+{{- else }}
+    {{- /* Calculate date range automatically */}}
+    {{- $startDate := $ctx.Date.Format "Jan 2006" }}
+    {{- $endDate := "" }}
+    {{- with $ctx.Params.endDate }}
+        {{- $endDate = (time .).Format "Jan 2006" }}
+    {{- else }}
+        {{- $endDate = i18n "present" | default "Present" }}
+    {{- end }}
+    {{- $dateRange = printf "%s - %s" $startDate $endDate }}
+{{- end }}
+
+<article class="timeline-item relative mb-8 md:mb-12"
+         data-type="{{ $ctx.Params.type | default "work" }}"
+         data-side="{{ if $isEven }}left{{ else }}right{{ end }}">
+
+    {{- /* Mobile/Tablet: Simple left-aligned layout */}}
+    <div class="md:hidden w-full pl-16 pr-4">
+        <div class="bg-neso-bg0 rounded-2xl p-5 border border-neso-deco2 transition hover:border-neso-splash">
+            {{- /* Timeline dot */}}
+            {{- $dotColor := "bg-neso-splash" }}
+            {{- if eq ($ctx.Params.type | default "work") "education" }}
+                {{- $dotColor = "bg-blue-500" }}
+            {{- else if eq ($ctx.Params.type | default "work") "certification" }}
+                {{- $dotColor = "bg-purple-500" }}
+            {{- else }}
+                {{- $dotColor = "bg-green-500" }}
+            {{- end }}
+            <div class="absolute left-8 -translate-x-1/2 w-4 h-4 rounded-full {{ $dotColor }} border-4 border-neso-bg1"></div>
+
+            {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange) }}
+        </div>
+    </div>
+
+    {{- /* Desktop: Alternating left/right layout */}}
+    <div class="hidden md:block">
+        {{- if $isEven }}
+            {{- /* Left side entry */}}
+            <div class="flex justify-end pr-8" style="width: calc(50% - 0.5rem);">
+                <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash text-right max-w-full">
+                    {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange "align" "right") }}
+                </div>
+            </div>
+
+            {{- /* Center dot */}}
+            <div class="absolute left-1/2 top-0 -translate-x-1/2 w-5 h-5 rounded-full bg-neso-splash border-4 border-neso-bg1 z-10"></div>
+        {{- else }}
+            {{- /* Right side entry */}}
+            <div class="flex justify-start pl-8 ml-auto" style="width: calc(50% - 0.5rem);">
+                <div class="bg-neso-bg0 rounded-2xl p-6 border border-neso-deco2 transition hover:border-neso-splash text-left max-w-full">
+                    {{- partial "components/timeline-entry-content.html" (dict "ctx" $ctx "dateRange" $dateRange "align" "left") }}
+                </div>
+            </div>
+
+            {{- /* Center dot */}}
+            <div class="absolute left-1/2 top-0 -translate-x-1/2 w-5 h-5 rounded-full bg-neso-splash border-4 border-neso-bg1 z-10"></div>
+        {{- end }}
+    </div>
+</article>

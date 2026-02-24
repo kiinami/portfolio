@@ -1,6 +1,6 @@
 {{- $tConfig := .context }}
 {{- if .id }}
-    {{- $tConfigSlice := where site.Params.technologies "id" .id }}
+    {{- $tConfigSlice := where site.Data.tech.technologies "id" .id }}
     {{- if gt (len $tConfigSlice) 0 }}
         {{- $tConfig = index $tConfigSlice 0 }}
     {{- end }}
@@ -14,18 +14,66 @@
     <div class="group relative flex items-center justify-center shrink-0 {{ $class }}" aria-label="{{ $tConfig.name }}">
         
         {{- /* Tooltip */}}
-        {{- $tooltipSideClass := "bottom-full mb-2" }}
+        {{- $wrapperDisplayClass := "bottom-full pb-2" }}
         {{- $arrowSideClass := "-bottom-1 border-b border-r" }} 
         
         {{- if eq $tooltipPos "bottom" }}
-             {{- $tooltipSideClass = "top-full mt-2" }}
+             {{- $wrapperDisplayClass = "top-full pt-2" }}
              {{- $arrowSideClass = "-top-1 border-t border-l" }}
         {{- end }}
 
-        <span class="absolute {{ $tooltipSideClass }} left-1/2 -translate-x-1/2 px-2 py-1 bg-neso-bg2 text-neso-fg1 text-xs font-medium rounded border border-neso-deco2 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
-            {{ i18n $tConfig.name | default $tConfig.name }}
-            <span class="absolute {{ $arrowSideClass }} left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-neso-deco2 rotate-45"></span>
-        </span>
+        <div class="absolute {{ $wrapperDisplayClass }} left-1/2 -translate-x-1/2 w-max max-w-[200px] z-50 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+             <div class="bg-neso-bg2 text-neso-fg1 text-xs font-medium rounded border border-neso-deco2 shadow-xl relative px-3 py-2">
+                 
+                 <!-- Header -->
+                 <div class="flex items-center gap-2 mb-2 border-b border-neso-deco2 pb-1">
+                    <span class="font-bold">
+                        {{- if reflect.IsMap $tConfig.name }}
+                            {{ index $tConfig.name site.Language.Lang | default (index $tConfig.name "en") }}
+                        {{- else }}
+                            {{ i18n $tConfig.name | default $tConfig.name }}
+                        {{- end }}
+                    </span>
+                    {{- if $tConfig.url }}
+                        <a href="{{ $tConfig.url }}" target="_blank" rel="noopener noreferrer" class="hover:text-neso-primary transition-colors">
+                            <i class="fa-solid fa-link"></i>
+                        </a>
+                    {{- end }}
+                 </div>
+
+                 <!-- Usage List -->
+                 {{- $usagePages := slice }}
+                 {{- range site.RegularPages }}
+                    {{- if and .Params.techs (in .Params.techs $tConfig.id) }}
+                        {{- $usagePages = $usagePages | append . }}
+                    {{- end }}
+                 {{- end }}
+
+                 {{- if gt (len $usagePages) 0 }}
+                    <div class="flex flex-col gap-1">
+                        <span class="opacity-75 italic">{{ if eq site.Language.Lang "es" }}Usado en:{{ else }}Used in:{{ end }}</span>
+                        <ul class="flex flex-col gap-1">
+                            {{- range $usagePages }}
+                                <li class="flex items-start gap-1.5">
+                                    <span class="mt-1.5 w-1 h-1 rounded-full bg-neso-fg1 shrink-0"></span>
+                                    <a href="{{ .RelPermalink }}" class="hover:underline hover:text-neso-primary transition-colors leading-tight">
+                                        {{- if .Params.organization }}
+                                            {{ .Title }} @ {{ .Params.organization }}
+                                        {{- else }}
+                                            {{ .LinkTitle }}
+                                        {{- end }}
+                                    </a>
+                                </li>
+                            {{- end }}
+                        </ul>
+                    </div>
+                 {{- end }}
+
+                 <!-- Arrow -->
+                 <span class="absolute {{ $arrowSideClass }} left-1/2 -translate-x-1/2 w-2 h-2 bg-neso-bg2 border-neso-deco2 rotate-45"></span>
+             </div>
+        </div>
+
 
         {{- /* Icon content */}}
         {{- if or $tConfig.icon_light $tConfig.icon_dark }}
@@ -38,10 +86,12 @@
         {{- else if $tConfig.logo }}
             <img src="{{ $tConfig.logo | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain">
         {{- else if $tConfig.icon }}
-            {{- if or (strings.HasSuffix $tConfig.icon ".svg") (strings.HasSuffix $tConfig.icon ".png") (strings.HasSuffix $tConfig.icon ".jpg") }}
+            {{- if strings.HasSuffix $tConfig.icon ".svg" }}
+                <img src="{{ $tConfig.icon | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain brightness-0 dark:invert">
+            {{- else if or (strings.HasSuffix $tConfig.icon ".png") (strings.HasSuffix $tConfig.icon ".jpg") }}
                 <img src="{{ $tConfig.icon | relURL }}" alt="{{ $tConfig.name }}" class="w-full h-full object-contain">
             {{- else }}
-                <i class="{{ $tConfig.icon }} {{ $textClass }} text-neso-fg1"></i>
+                <iconify-icon {{ printf "icon=%q" $tConfig.icon | safeHTMLAttr }} width="100%" height="100%" class="text-neso-fg1"></iconify-icon>
             {{- end }}
         {{- end }}
     </div>
