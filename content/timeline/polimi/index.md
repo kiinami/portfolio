@@ -11,9 +11,9 @@ type: "education"
 description: "Erasmus stay in Milano, taking courses from the Master's Degree in Computer Science and Engineering"
 summary: "Erasmus stay in Milano, taking courses from the Master's Degree in Computer Science and Engineering"
 keywords: ["erasmus", "politecnico di milano", "polimi", "computer science", "engineering", "italy", "milano", "master's degree", "study abroad"]
-techs: ["python", "java", "cpp"]
+techs: ["python", "dart", "flutter", "git", "github", "unity", "csharp", "fastapi", "arduino", "raspberrypi"]
 
-projects: ["shoto"]
+projects: ["shoto", "club"]
 
 links:
   - name: "University"

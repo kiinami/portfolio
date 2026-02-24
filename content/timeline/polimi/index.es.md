@@ -13,7 +13,7 @@ summary: "Estancia Erasmus en Milán, cursando asignaturas del Máster en Ingeni
 keywords: ["erasmus", "politecnico di milano", "polimi", "ingeniería informática", "italia", "milán", "máster", "estudiar en el extranjero"]
 techs: ["python", "java", "cpp"]
 
-projects: ["shoto"]
+projects: ["shoto", "club"]
 
 links:
   - name: "Universidad"
