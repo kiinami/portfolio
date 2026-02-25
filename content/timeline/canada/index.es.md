@@ -35,7 +35,7 @@ Esta experiencia inmersiva requirió una integración total en el sistema educat
 ## Logros Académicos
 
 - Obtuve una nota media final de 91/100 en todas las asignaturas (incluyendo todas las actividades extracurriculares).
-- Aprobé con éxito los exámenes de diploma de Grado 12 (Diploma Examinations) para English Language Arts 30, Science 30 y Mathematics 30-2, superando el plan de estudios estándar para mi nivel de grado.
+- Aprobé con éxito los exámenes de diploma de Grado 12 de la Provincia de Alberta (Alberta's Diploma Examinations) para las asignaturas de English Language Arts 30, Science 30 y Mathematics 30-2, superando el plan de estudios estándar para mi nivel de grado.
 - Cursé todas las asignaturas en inglés y estudié dos idiomas adicionales a partir de este: francés y japonés.
 
 ## Actividades Extracurriculares

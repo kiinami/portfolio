@@ -1,10 +1,10 @@
 ---
 title: "Technical Office Assistant"
 date: 2020-07-01T15:03:20+01:00
-endDate: 2023-10-01T15:03:20+01:00
+endDate: 2024-10-01T15:03:20+01:00
 slug: "encasa"
 
-customDate: "Summers 2020-2023"
+customDate: "Summers 2020-2024"
 
 organization: "Encasa"
 location: "Seville, Spain"

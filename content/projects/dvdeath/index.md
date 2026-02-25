@@ -44,7 +44,7 @@ The concept of the game is really fun, and in the future I would like to expand 
 - Useful programming patterns for performant videogame design
 - Unity's animation system, including states and blend trees
 - How to draw and animate simple pixel art using Aseprite
-- How to perform algorythmic beat analysis on a song
+- How to perform algorithmic beat analysis on a song
 
 # Gallery
 

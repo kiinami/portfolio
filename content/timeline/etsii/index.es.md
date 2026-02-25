@@ -13,7 +13,7 @@ summary: "Grado en Informática con enfoque en ingeniería de software, cursado 
 keywords: ["informática", "ingeniería de software", "algoritmos"]
 
 techs: ["python", "java", "html", "css", "javascript", "git", "github", "github_actions", "mariadb", "sqlite", "postgresql", "docker", "docker_compose", "react", "bash", "django", "flask", "linux", "blender", "jupyter", "typst", "vagrant", "latex", "sagemath", "spring", "octave"]
-projects: ["kamihi"]
+projects: ["kamihi", "flight"]
 
 links:
   - name: "Universidad de Sevilla"

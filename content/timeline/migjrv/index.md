@@ -25,14 +25,14 @@ params:
 
 # Degree Overview
 
-I am currently coursing a Master's degree in Computer Graphics, Games and Virtual Reality at Rey Juan Carlos University.
+I am currently purusing a Master's degree in Computer Graphics, Games and Virtual Reality at Rey Juan Carlos University.
 
 The degree, that covers 60ECTS on a single year, covers an incredible amount of content regarding this discipline, from the theoretical fundamentals to many practical projects.
 
 ## Key Courses
 
-- Mathematical and Physical Fundamentals for Computer Graphics (Semester 1): covered triangular meshes in depth, several numerical methods and a whole array of physics.
-- 3D Graphics (Semester 1): made a render engine in OpenGL step by step (see [here](projects/lisa)).
-- Videogame Engines (Semester 1): made a small videogame in Unity following best practices and with a focus on animation (see [here](projects/dvdeath)).
+- **Mathematical and Physical Fundamentals for Computer Graphics (Semester 1)**: covered triangular meshes in depth, several numerical methods and a whole array of physics.
+- **3D Graphics (Semester 1)**: made a render engine in OpenGL step by step (see [here](projects/lisa)).
+- **Videogame Engines (Semester 1)**: made a small videogame in Unity following best practices and with a focus on animation (see [here](projects/dvdeath)).
 
 (Semester 2 still ongoing)

@@ -22,9 +22,9 @@ params:
 
 # Description
 
-Small app aimed at informing parents and children of youth associations in Italy about the many activities offered, which many small functionalities to make life easier for organizers too.
+Small app aimed at informing parents and children of youth associations in Italy about the many activities offered, withmany small functionalities to make life easier for organizers too.
 
-The app includes creating and sending out information about events (complete with notifications), RSVPs, a calendar with all activities offered by the association, an user ranking system based on soccer matches for those associations that offer a soccer school, user verification and aproval to access any data, and much more.
+The app includes creating and sending out information about events (complete with notifications), RSVPs, a calendar with all activities offered by the association, an user ranking system based on soccer matches for those associations that offer a soccer school, user verification and approval to access any data, and much more.
 
 It can run both on mobile devices and on the desktop, with a responsive interface that adapts to the screen size. All operations, including administrative ones like creating events, approving users or entering new soccer scores, can be done from any device too, directly in the app.
 
@@ -36,7 +36,7 @@ This app started as a project for the Design and Implementation of Mobile Applic
 
 Since both of us were at the time volunteering in youth associations, we had very close contact with the "clients". We made the app we would have liked to use while volunteering, solving the problem that made organizing activities difficult: clear communication between parents, children and organizers.
 
-The application was internationalized from the beginning both in Italian and English, to cater to the youth associations we were offering it to while keeping it open for any other association that maight be interested.
+The application was internationalized from the beginning both in Italian and English, to cater to the youth associations we were offering it to while keeping it open for any other association that might be interested.
 
 After the end of the course, I sidestepped from development, and the other team member has continued its development and polishing to this day.
 

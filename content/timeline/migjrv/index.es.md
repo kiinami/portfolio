@@ -31,8 +31,8 @@ El máster, que consta de 60 créditos ECTS en un solo año, abarca una cantidad
 
 ## Asignaturas clave
 
-- Fundamentos Matemáticos y Físicos para la Informática Gráfica (Semestre 1): cubrió mallas triangulares en profundidad, varios métodos numéricos y toda una serie de conceptos de física.
-- Gráficos 3D (Semestre 1): desarrollé un motor de renderizado en OpenGL paso a paso (ver [aquí](projects/lisa)).
-- Motores de Videojuegos (Semestre 1): desarrollé un pequeño videojuego en Unity siguiendo buenas prácticas y con un enfoque en la animación (ver [aquí](projects/dvdeath)).
+- **Fundamentos Matemáticos y Físicos para la Informática Gráfica (Semestre 1)**: cubrió mallas triangulares en profundidad, varios métodos numéricos y toda una serie de conceptos de física.
+- **Gráficos 3D (Semestre 1)**: desarrollé un motor de renderizado en OpenGL paso a paso (ver [aquí](projects/lisa)).
+- **Motores de Videojuegos (Semestre 1)**: desarrollé un pequeño videojuego en Unity siguiendo buenas prácticas y con un enfoque en la animación (ver [aquí](projects/dvdeath)).
 
 (Semestre 2 aún en curso)

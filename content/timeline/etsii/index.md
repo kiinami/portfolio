@@ -13,7 +13,7 @@ summary: "Computer Science degree with focus on software engineering"
 keywords: ["computer science", "software engineering", "algorithms"]
 
 techs: ["python", "java", "html", "css", "javascript", "git", "github", "github_actions", "mariadb", "sqlite", "postgresql", "docker", "docker_compose", "react", "bash", "django", "flask", "linux", "blender", "jupyter", "typst", "vagrant", "latex", "sagemath", "spring", "octave"]
-projects: ["kamihi", flight]
+projects: ["kamihi", "flight"]
 
 links:
   - name: "University of Seville"
@@ -22,6 +22,8 @@ links:
     url: "https://www.etsii.us.es/"
   - name: "Syllabus"
     url: "https://www.etsii.us.es/index.php/grados/ingenieria-del-software/plan-de-estudios"
+  - name: "Almonte"
+    url: "https://colegiomayoralmonte.com/"
 
 params:
   neso:
@@ -36,7 +38,11 @@ I was part of the English Group, a selective track where the majority of courses
 
 The curriculum balanced theoretical computer science with hands-on software engineering practices, covering everything from low-level systems programming to high-level software architecture, with emphasis on team-based projects that simulate real-world development scenarios.
 
-During my studies I also had the opportunity to study abroad for a year in Politecnico di Milano (see [here](timeline/polimi)), and to collaborate as a grant student in the ES3 research group of the university during the 3rd and 4th years (see [here](timeline/es3)).
+During my studies I also had the opportunity to study abroad for a year in Politecnico di Milano (see [here](timeline/polimi)) with the Erasmus+ progrm, and to collaborate as a grant student in the ES3 research group of the university during the 3rd and 4th years (see [here](timeline/es3)).
+
+Additionally, I participated in numerous activities in the Almonte University Residence, being part of its Highlight Program for the entirety of my studies. Some of these activities include cultural gatherings, visits to prominent companies in the city, volunteering experiences, international trips (European Parliament in Brussels, Italy, Portugal...) and participation in the UNIV international forum at Rome.
+
+I also spent part of my time volunteering at Tarfia Youth Club as a children leisure monitor and activities organizer. I was first English teacher and later director at the Castle English Course, a summer camp organized every year in July.
 
 I finished my studies with [Kamihi](projects/kamihi), a thesis project based on [my work at Encasa](timeline/encasa), for which I received the maximum grade, and that is still in active development.
 
