@@ -75,6 +75,9 @@ translations:
 view_archives:
     other: "Ver Archivos"
 
+more_projects:
+    other: "Más proyectos"
+
 words:
     one: "palabra"
     other: "{{ .Count }} palabras"
