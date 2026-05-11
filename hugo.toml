@@ -112,7 +112,7 @@ time_format = "2 de January de 2006"
 # --------------------------------
 
 [params]
-  rybbit_instance_url = "https://analytics.jpgl.es/api/script.js"
+  rybbit_instance_url = "https://analytics.jpgl.es"
   rybbit_site_id = "11baf1cec8f8"
 
 # Project States
