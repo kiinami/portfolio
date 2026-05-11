@@ -514,3 +514,12 @@
   [technologies.name]
     en = "Autodesk Maya"
     es = "Autodesk Maya"
+
+[[technologies]]
+  id = "vcpkg"
+  icon = "https://github.com/vcpkg/vcpkg.github.io/raw/refs/heads/main/assets/mark/favicon-mask-icon.svg"
+  url = "https://vcpkg.io/en/"
+  category = "tools"
+  [technologies.name]
+    en = "vcpkg"
+    es = "vcpkg"
