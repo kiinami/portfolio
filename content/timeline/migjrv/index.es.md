@@ -12,7 +12,7 @@ summary: "Máster de especialización de un año centrado en informática gráfi
 keywords: ["informática gráfica", "realidad virtual", "desarrollo de videojuegos", "máster", "universidad rey juan carlos", "urjc", "opengl", "unity", "gráficos 3d"]
 techs: ["cpp", "csharp", "unity", "opengl", "vulkan", "cmake", "blender", "bash", "linux", "git", "github", "typst", "matlab", "quest"]
 
-projects: ["lisa", "dvdeath"]
+projects: ["lisa", "dvdeath", "asu-p3", "lisa-vulkan"]
 
 links:
   - name: "Sitio oficial"

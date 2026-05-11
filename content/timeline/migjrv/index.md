@@ -12,7 +12,7 @@ summary: "One-year specialization degree focused on computer graphics"
 keywords: ["computer graphics", "virtual reality", "game development", "master's degree", "rey juan carlos university", "urjc", "opengl", "unity", "3d graphics"]
 techs: ["cpp", "csharp", "unity", "opengl", "vulkan", "cmake", "blender", "bash", "linux", "git", "github", "typst", "matlab", "quest"]
 
-projects: ["lisa", "dvdeath", "asu-p3"]
+projects: ["lisa", "dvdeath", "asu-p3", "lisa-vulkan"]
 
 links:
   - name: "Official site"

@@ -7,6 +7,12 @@
     es = "Lenguajes de programación"
 
 [[categories]]
+  id = "graphics"
+  [categories.name]
+    en = "Graphics"
+    es = "Gráficos"
+
+[[categories]]
   id = "frameworks"
   [categories.name]
     en = "Frameworks & Libraries"
@@ -29,12 +35,6 @@
   [categories.name]
     en = "Design"
     es = "Diseño"
-
-[[categories]]
-  id = "animation"
-  [categories.name]
-    en = "Animation"
-    es = "Animación"
 
 # --------------------------------
 
@@ -87,7 +87,7 @@
   id = "opengl"
   icon = "simple-icons:opengl"
   url = "https://www.opengl.org/"
-  category = "frameworks"
+  category = "graphics"
   [technologies.name]
     en = "OpenGL"
     es = "OpenGL"
@@ -159,10 +159,19 @@
   id = "glsl"
   icon = "simple-icons:opengl"
   url = "https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)"
-  category = "languages"
+  category = "graphics"
   [technologies.name]
     en = "GLSL"
     es = "GLSL"
+
+[[technologies]]
+  id = "slang"
+  icon = "https://github.com/shader-slang/shader-slang.github.io/raw/refs/heads/main/images/favicon.svg"
+  url = "https://shader-slang.org/"
+  category = "graphics"
+  [technologies.name]
+    en = "Slang"
+    es = "Slang"
 
 [[technologies]]
   id = "unity"
@@ -330,7 +339,7 @@
   id = "blender"
   icon = "simple-icons:blender"
   url = "https://www.blender.org/"
-  category = "animation"
+  category = "graphics"
   [technologies.name]
     en = "Blender"
     es = "Blender"
@@ -483,7 +492,7 @@
   id = "vulkan"
   icon = "simple-icons:vulkan"
   url = "https://www.vulkan.org/"
-  category = "frameworks"
+  category = "graphics"
   [technologies.name]
     en = "Vulkan"
     es = "Vulkan"
@@ -510,7 +519,7 @@
   id = "maya"
   icon = "simple-icons:autodeskmaya"
   url = "https://www.autodesk.com/products/maya/overview"
-  category = "animation"
+  category = "graphics"
   [technologies.name]
     en = "Autodesk Maya"
     es = "Autodesk Maya"
@@ -523,3 +532,21 @@
   [technologies.name]
     en = "vcpkg"
     es = "vcpkg"
+
+[[technologies]]
+  id = "meson"
+  icon = "file-icons:meson"
+  url = "https://mesonbuild.com/"
+  category = "tools"
+  [technologies.name]
+    en = "Meson"
+    es = "Meson"
+
+[[technologies]]
+  id = "gltf"
+  icon = "simple-icons:gltf"
+  url = "https://www.khronos.org/gltf/"
+  category = "graphics"
+  [technologies.name]
+    en = "glTF"
+    es = "glTF"
