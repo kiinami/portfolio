@@ -30,6 +30,12 @@
     en = "Design"
     es = "Diseño"
 
+[[categories]]
+  id = "animation"
+  [categories.name]
+    en = "Animation"
+    es = "Animación"
+
 # --------------------------------
 
 [[technologies]]
@@ -324,7 +330,7 @@
   id = "blender"
   icon = "simple-icons:blender"
   url = "https://www.blender.org/"
-  category = "design"
+  category = "animation"
   [technologies.name]
     en = "Blender"
     es = "Blender"
@@ -499,3 +505,12 @@
   [technologies.name]
     en = "Aseprite"
     es = "Aseprite"
+
+[[technologies]]
+  id = "maya"
+  icon = "simple-icons:autodeskmaya"
+  url = "https://www.autodesk.com/products/maya/overview"
+  category = "animation"
+  [technologies.name]
+    en = "Autodesk Maya"
+    es = "Autodesk Maya"
