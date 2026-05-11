@@ -1,6 +1,6 @@
 ---
 title: "maya4linux"
-date: 2026-05-11T13:32:51+02:00
+date: 2026-03-17T13:32:51+02:00
 slug: "maya4linux"
 
 description: "Ejecución de Maya 2026.3 en Linux mediante contenedores de Docker"
