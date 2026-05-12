@@ -1,6 +1,6 @@
 ---
 title: "asu-p3"
-date: 2026-05-11T14:15:17+02:00
+date: 2026-03-23T14:15:17+02:00
 slug: "asu-p3"
 
 description: "Simulación euleriana de fluidos para la asignatura ASA1 en la URJC"
