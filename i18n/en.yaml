@@ -35,6 +35,9 @@ entry_count:
 entry_link_aria:
     other: "Read “{{ .Title }}”"
 
+read_more:
+    other: "Read more →"
+
 feature_entries:
     other: "Latest projects"
 

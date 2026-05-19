@@ -121,11 +121,15 @@
                         {{- $hideMeta = . }}
                     {{- end }}
                 {{- end }}
-                {{- if not $hideMeta }}
-                    <footer class="flex flex-wrap items-baseline text-sm text-neso-fg3 {{- cond $isHero "" " md:mt-auto" }}">
-                        {{- partial "content/metadata.html" . }}
-                    </footer>
-                {{- end }}
+                <div class="{{- cond $isHero "" "md:mt-auto" -}}">
+                    {{- if not $hideMeta }}
+                        <footer class="flex flex-wrap items-baseline text-sm text-neso-fg3">
+                            {{- partial "content/metadata.html" . }}
+                        </footer>
+                    {{- end }}
+
+                    {{- partial "components/read-more.html" (dict "ctx" . "align" "left") }}
+                </div>
             </div>
         </article>
     {{- end }}
