@@ -550,3 +550,48 @@
   [technologies.name]
     en = "glTF"
     es = "glTF"
+
+[[technologies]]
+  id = "openglsc1"
+  icon = "simple-icons:opengl"
+  url = "https://www.khronos.org/openglsc/"
+  category = "graphics"
+  [technologies.name]
+    en = "OpenGL SC 1.0"
+    es = "OpenGL SC 1.0"
+
+[[technologies]]
+  id = "openglsc2"
+  icon = "simple-icons:opengl"
+  url = "https://www.khronos.org/openglsc/"
+  category = "graphics"
+  [technologies.name]
+    en = "OpenGL SC 2.0"
+    es = "OpenGL SC 2.0"
+
+[[technologies]]
+  id = "redis"
+  icon = "simple-icons:redis"
+  url = "https://redis.io/"
+  category = "db"
+  [technologies.name]
+    en = "Redis"
+    es = "Redis"
+
+[[technologies]]
+  id = "bitbucket"
+  icon = "simple-icons:bitbucket"
+  url = "https://bitbucket.org/"
+  category = "tools"
+  [technologies.name]
+    en = "Bitbucket"
+    es = "Bitbucket"
+
+[[technologies]]
+  id = "c"
+  icon = "simple-icons:c"
+  url = "https://en.wikipedia.org/wiki/C_(programming_language)"
+  category = "languages"
+  [technologies.name]
+    en = "C"
+    es = "C"
