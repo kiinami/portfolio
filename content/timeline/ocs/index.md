@@ -30,4 +30,4 @@ params:
 
 # Role Overview
 
-I developed graphical interfaces for Cockpit Display Systems defined by the [ARINC661 Part 1 standard](https://www.sae.org/standards/arinc661p1-9-661p1-9-cockpit-display-system-interfaces-user-systems-part-1-avionics-interfaces-basic-symbology-behavior). The result is a generic render engine programmed in pure C that can take in binaries defining the interface and render them efficiently using OpenGL SC, communicating with data-providing applications using Redis.
+I develop graphical interfaces for Cockpit Display Systems defined by the [ARINC661 Part 1 standard](https://www.sae.org/standards/arinc661p1-9-661p1-9-cockpit-display-system-interfaces-user-systems-part-1-avionics-interfaces-basic-symbology-behavior). The result is a generic render engine programmed in pure C that can take in binaries defining the interface and render them efficiently using OpenGL SC, communicating with data-providing applications using Redis.
