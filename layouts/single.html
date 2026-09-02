@@ -29,6 +29,14 @@
             </figure>
         {{- end }}
 
+        {{- if and (eq .Section "projects") (eq (lower (.Params.state | default "")) "in progress") }}
+            <div class="cnt mb-r-xl">
+                <div class="project-status-banner" role="status" aria-live="polite">
+                    This is a work in progress. Information may be outdated. Please check the links above for the most up-to-date information.
+                </div>
+            </div>
+        {{- end }}
+
         {{- /* TOC visibility — Site default; FM can override true/false */}}
         {{- $showToc := site.Params.neso.page.show_toc }}
         {{- with .Params.neso.show_toc }}
