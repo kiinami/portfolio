@@ -6,7 +6,7 @@ slug: "kwc"
 description: "Herramienta web para hacer crecer y gestionar mi colección de fondos de pantalla"
 summary: "Herramienta web para hacer crecer y gestionar mi colección de fondos de pantalla"
 keywords: ["kwc", "wallpaper", "fondos de pantalla", "gestión", "django", "python", "ffmpeg", "extracción de video", "ia", "llm", "automatización"]
-techs: ["python", "django", "ffmpeg", "copilot", "github", "github_actions", "docker", "docker_compose"]
+techs: ["python", "django", "ffmpeg", "copilot", "github", "github_actions", "uv", "docker", "docker_compose"]
 state: "in progress"
 links:
   - name: "GitHub"

@@ -7,7 +7,7 @@ description: "Hobby rendering engine in Vulkan"
 summary: "Hobby rendering engine in Vulkan"
 keywords: ["vulkan", "rendering engine", "cpp", "slang", "meson", "gltf", "computer graphics", "urjc"]
 techs: ["cpp", "vulkan", "slang", "meson", "gltf"]
-state: "in progress" # in progress/finished/dropped/paused
+state: "paused" # in progress/finished/dropped/paused
 links:
   - name: "GitHub"
     url: "https://github.com/kiinami/lisa-vulkan"
@@ -37,4 +37,4 @@ Hobby rendering engine in C++, using Vulkan. The evolution of my previous work i
 - Strong assets pipeline
 - FPS-style camera movement and rotation with keyboard and mouse
 
-The project is built with Meson and tries to use newer technologies, like the Slang shading language, Vulkan-Hpp, Vulkan Profiles...
+The project tries to use newer technologies, like the Slang shading language, Vulkan-Hpp, Vulkan Profiles...

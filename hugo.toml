@@ -6,7 +6,7 @@ title = "Juan Pedro Gálvez López"
 theme = ["neso", "hugo-photoswipe5-gallery"]
 
 timeZone = "Europe/Madrid"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 
@@ -15,18 +15,18 @@ defaultContentLanguageInSubdir = false
 
 [languages.en]
 disabled          = false
-languageCode      = "en-us"
-languageDirection = "ltr"
-languageName      = "English"
+locale      = "en-us"
+direction = "ltr"
+label      = "English"
 hasCJKLanguage    = false
 title             = "Juan Pedro Gálvez López"
 weight            = 1
 
 [languages.es]
 disabled          = false
-languageCode      = "es"
-languageDirection = "ltr"
-languageName      = "Español"
+locale            = "es"
+direction         = "ltr"
+label             = "Español"
 hasCJKLanguage    = false
 title             = "Juan Pedro Gálvez López"
 weight            = 2

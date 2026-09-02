@@ -6,7 +6,7 @@ slug: "kwc"
 description: "Web-based tool to grow and manage my wallpaper collection"
 summary: "Web-based tool to grow and manage my wallpaper collection"
 keywords: ["kwc", "wallpaper", "collection", "management", "django", "python", "ffmpeg", "video extraction", "ai", "llm", "automation"]
-techs: ["python", "django", "ffmpeg", "copilot", "github", "github_actions", "docker", "docker_compose"]
+techs: ["python", "django", "ffmpeg", "copilot", "github", "github_actions", "uv", "docker", "docker_compose"]
 state: "in progress" 
 links:
   - name: "GitHub"

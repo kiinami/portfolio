@@ -2,12 +2,12 @@
 title           : "Kamihi"
 date: 2025-07-18T10:17:57+01:00
 slug            : "kamihi"  # slug (URL segment) for this post
-state: "in progress"
+state: "paused"
 
 description     : "Python framework for Telegram bot development and management"
 summary         : "Python framework for Telegram bot development and management"
 keywords        : ["python", "telegram", "framework", "webapp", "postgresql", "sqlite", "intuitive", "api"]
-techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github", "github_actions"]
+techs           : ["python", "telegram", "postgresql", "sqlite", "mongodb", "docker", "docker_compose", "linear", "bash", "git", "github", "github_actions", "uv"]
 links:
   - name: "GitHub"
     url: "https://github.com/kamihi-org/kamihi"

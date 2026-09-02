@@ -7,7 +7,7 @@ description: "Motor de render en Vulkan"
 summary: "Motor de render en Vulkan"
 keywords: ["vulkan", "motor de renderizado", "cpp", "slang", "meson", "gltf", "informática gráfica", "urjc"]
 techs: ["cpp", "vulkan", "slang", "meson", "gltf"]
-state: "in progress"
+state: "paused"
 links:
   - name: "GitHub"
     url: "https://github.com/kiinami/lisa-vulkan"

@@ -595,3 +595,40 @@
   [technologies.name]
     en = "C"
     es = "C"
+
+[[technologies]]
+  id = "cuda"
+  icon = "simple-icons:nvidia"
+  url = "https://developer.nvidia.com/cuda-zone"
+  category = "languages"
+  [technologies.name]
+    en = "CUDA"
+    es = "CUDA"
+
+[[technologies]]
+  id = "warp"
+  icon = "simple-icons:nvidia"
+  url = "https://nvidia.github.io/warp/stable/index.html"
+  category = "frameworks"
+  [technologies.name]
+    en = "NVIDIA Warp"
+    es = "NVIDIA Warp"
+
+[[technologies]]
+  id = "uv"
+  icon = "simple-icons:uv"
+  url = "https://docs.astral.sh/uv/"
+  category = "tools"
+  [technologies.name]
+    en = "uv"
+    es = "uv"
+
+[[technologies]]
+  id = "houdini"
+  icon = "simple-icons:houdini"
+  url = "https://www.sidefx.com/products/houdini/"
+  category = "graphics"
+  [technologies.name]
+    en = "Houdini"
+    es = "Houdini"
+  
