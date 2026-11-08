@@ -11,3 +11,17 @@ hugo.linux
 
 # Node modules
 node_modules/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.*
+
+# OS junk
+.DS_Store
+Thumbs.db
