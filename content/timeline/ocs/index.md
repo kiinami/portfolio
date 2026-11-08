@@ -12,7 +12,7 @@ type: "work"
 
 description: "Cockpit Display System (CDS) interface development using OpenGL SC1 and SC2"
 summary: "Cockpit Display System (CDS) interface development using OpenGL SC1 and SC2"
-keywords: ["keyword1", "keyword2", "keyword3"]
+keywords: ["opengl sc", "cockpit display systems", "arinc 661", "avionics", "embedded systems", "c", "redis", "rendering"]
 techs: ["c", "openglsc1", "openglsc2", "redis", "cmake", "git", "bitbucket", "python"]
 
 projects: []  # Add project slugs here to display them as "Related Projects"

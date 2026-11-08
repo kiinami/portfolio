@@ -12,7 +12,7 @@ type: "work"
 
 description: "Desarrollo de interfaces gráficas para sistemas de visualización de cabina (CDS) en OpenGL SC1 y SC2"
 summary: "Desarrollo de interfaces gráficas para sistemas de visualización de cabina (CDS) en OpenGL SC1 y SC2"
-keywords: ["palabra1", "palabra2", "palabra3"]
+keywords: ["opengl sc", "sistemas de visualización de cabina", "arinc 661", "aviónica", "sistemas embebidos", "c", "redis", "renderizado"]
 techs: ["c", "openglsc1", "openglsc2", "redis", "cmake", "git", "bitbucket", "python"]
 
 projects: []  # Agrega los slugs de proyectos aquí para mostrarlos como "Proyectos Relacionados"
