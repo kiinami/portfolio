@@ -10,7 +10,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "braces": "^3.0.3",
-    "detect-libc": "^1.0.3",
+    "detect-libc": "^2.1.2",
     "enhanced-resolve": "^5.18.4",
     "fill-range": "^7.1.1",
     "graceful-fs": "^4.2.11",
