@@ -17,7 +17,7 @@ projects: []
 
 links:
   - name: "Empresa"
-    url: "https://example.com"
+    url: "https://es3.us.es/"
 
 params:
   neso:
